@@ -1,0 +1,67 @@
+<?php
+declare(strict_types=1);
+
+// Arbeitnow SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+ArbeitnowUtility::setRegistrar(function (ArbeitnowUtility $u): void {
+    $u->clean = [ArbeitnowClean::class, 'call'];
+    $u->done = [ArbeitnowDone::class, 'call'];
+    $u->make_error = [ArbeitnowMakeError::class, 'call'];
+    $u->feature_add = [ArbeitnowFeatureAdd::class, 'call'];
+    $u->feature_hook = [ArbeitnowFeatureHook::class, 'call'];
+    $u->feature_init = [ArbeitnowFeatureInit::class, 'call'];
+    $u->fetcher = [ArbeitnowFetcher::class, 'call'];
+    $u->make_fetch_def = [ArbeitnowMakeFetchDef::class, 'call'];
+    $u->make_context = [ArbeitnowMakeContext::class, 'call'];
+    $u->make_options = [ArbeitnowMakeOptions::class, 'call'];
+    $u->make_request = [ArbeitnowMakeRequest::class, 'call'];
+    $u->make_response = [ArbeitnowMakeResponse::class, 'call'];
+    $u->make_result = [ArbeitnowMakeResult::class, 'call'];
+    $u->make_point = [ArbeitnowMakePoint::class, 'call'];
+    $u->make_spec = [ArbeitnowMakeSpec::class, 'call'];
+    $u->make_url = [ArbeitnowMakeUrl::class, 'call'];
+    $u->param = [ArbeitnowParam::class, 'call'];
+    $u->prepare_auth = [ArbeitnowPrepareAuth::class, 'call'];
+    $u->prepare_body = [ArbeitnowPrepareBody::class, 'call'];
+    $u->prepare_headers = [ArbeitnowPrepareHeaders::class, 'call'];
+    $u->prepare_method = [ArbeitnowPrepareMethod::class, 'call'];
+    $u->prepare_params = [ArbeitnowPrepareParams::class, 'call'];
+    $u->prepare_path = [ArbeitnowPreparePath::class, 'call'];
+    $u->prepare_query = [ArbeitnowPrepareQuery::class, 'call'];
+    $u->result_basic = [ArbeitnowResultBasic::class, 'call'];
+    $u->result_body = [ArbeitnowResultBody::class, 'call'];
+    $u->result_headers = [ArbeitnowResultHeaders::class, 'call'];
+    $u->transform_request = [ArbeitnowTransformRequest::class, 'call'];
+    $u->transform_response = [ArbeitnowTransformResponse::class, 'call'];
+});

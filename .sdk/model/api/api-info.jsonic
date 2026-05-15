@@ -1,0 +1,24 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Arbeitnow API Documentation"
+        url: "https://documenter.getpostman.com/view/18545278/UVJbJdKh"
+      }
+      description: "Arbeitnow helps companies hire candidates with visa sponsorship / four day work week / remote opportunities."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://www.arbeitnow.com/api"
+        }
+      ]
+      title: "Arbeitnow"
+      version: "1.0.0"
+    }
+  }
+}
+
+}
