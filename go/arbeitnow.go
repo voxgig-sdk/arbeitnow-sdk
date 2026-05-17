@@ -1,10 +1,10 @@
 package voxgigarbeitnowsdk
 
 import (
-	"github.com/voxgig-sdk/arbeitnow-sdk/core"
-	"github.com/voxgig-sdk/arbeitnow-sdk/entity"
-	"github.com/voxgig-sdk/arbeitnow-sdk/feature"
-	_ "github.com/voxgig-sdk/arbeitnow-sdk/utility"
+	"github.com/voxgig-sdk/arbeitnow-sdk/go/core"
+	"github.com/voxgig-sdk/arbeitnow-sdk/go/entity"
+	"github.com/voxgig-sdk/arbeitnow-sdk/go/feature"
+	_ "github.com/voxgig-sdk/arbeitnow-sdk/go/utility"
 )
 
 // Type aliases preserve external API.

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	sdk "github.com/voxgig-sdk/arbeitnow-sdk"
-	"github.com/voxgig-sdk/arbeitnow-sdk/core"
+	sdk "github.com/voxgig-sdk/arbeitnow-sdk/go"
+	"github.com/voxgig-sdk/arbeitnow-sdk/go/core"
 )
 
 func TestJobDirect(t *testing.T) {

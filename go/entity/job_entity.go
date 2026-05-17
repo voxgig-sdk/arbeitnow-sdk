@@ -1,9 +1,9 @@
 package entity
 
 import (
-	"github.com/voxgig-sdk/arbeitnow-sdk/core"
+	"github.com/voxgig-sdk/arbeitnow-sdk/go/core"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/arbeitnow-sdk/go/utility/struct"
 )
 
 type JobEntity struct {
