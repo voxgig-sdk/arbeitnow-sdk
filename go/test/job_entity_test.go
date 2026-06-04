@@ -119,7 +119,6 @@ func jobBasicSetup(extra map[string]any) *entityTestSetup {
 		"ARBEITNOW_TEST_JOB_ENTID": idmap,
 		"ARBEITNOW_TEST_LIVE":      "FALSE",
 		"ARBEITNOW_TEST_EXPLAIN":   "FALSE",
-		"ARBEITNOW_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["ARBEITNOW_TEST_JOB_ENTID"])
@@ -130,7 +129,6 @@ func jobBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["ARBEITNOW_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
-				"apikey": env["ARBEITNOW_APIKEY"],
 			},
 			extra,
 		})

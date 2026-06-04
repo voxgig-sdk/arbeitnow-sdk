@@ -83,7 +83,6 @@ def job_basic_setup(extra)
     "ARBEITNOW_TEST_JOB_ENTID" => idmap,
     "ARBEITNOW_TEST_LIVE" => "FALSE",
     "ARBEITNOW_TEST_EXPLAIN" => "FALSE",
-    "ARBEITNOW_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -95,7 +94,6 @@ def job_basic_setup(extra)
   if env["ARBEITNOW_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["ARBEITNOW_APIKEY"],
       },
       extra || {},
     ])

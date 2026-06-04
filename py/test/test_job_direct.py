@@ -61,14 +61,12 @@ def _job_direct_setup(mockres):
     env = runner.env_override({
         "ARBEITNOW_TEST_JOB_ENTID": {},
         "ARBEITNOW_TEST_LIVE": "FALSE",
-        "ARBEITNOW_APIKEY": "NONE",
     })
 
     live = env.get("ARBEITNOW_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
-            "apikey": env.get("ARBEITNOW_APIKEY"),
         }
         client = ArbeitnowSDK(merged_opts)
         return {

@@ -15,9 +15,6 @@ module ArbeitnowConfig
       },
       "options" => {
         "base" => "https://www.arbeitnow.com/api",
-        "auth" => {
-          "prefix" => "Bearer",
-        },
         "headers" => {
           "content-type" => "application/json",
         },

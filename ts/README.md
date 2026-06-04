@@ -17,9 +17,7 @@ loading a specific record.
 ```ts
 import { ArbeitnowSDK } from 'arbeitnow'
 
-const client = new ArbeitnowSDK({
-  apikey: process.env.ARBEITNOW_APIKEY,
-})
+const client = new ArbeitnowSDK({})
 ```
 
 ### 2. List jobs
@@ -84,7 +82,7 @@ const result = await client.Planet().load({ id: 'test01' })
 You can also use the instance method:
 
 ```ts
-const client = new ArbeitnowSDK({ apikey: '...' })
+const client = new ArbeitnowSDK()
 const testClient = client.tester()
 ```
 
@@ -120,7 +118,6 @@ const logger = {
 }
 
 const client = new ArbeitnowSDK({
-  apikey: '...',
   extend: [logger],
 })
 ```
@@ -131,7 +128,6 @@ Create a `.env.local` file at the project root:
 
 ```
 ARBEITNOW_TEST_LIVE=TRUE
-ARBEITNOW_APIKEY=<your-key>
 ```
 
 Then run:
@@ -149,7 +145,6 @@ cd ts && npm test
 
 ```ts
 new ArbeitnowSDK(options?: {
-  apikey?: string
   base?: string
   prefix?: string
   suffix?: string
@@ -160,7 +155,6 @@ new ArbeitnowSDK(options?: {
 
 | Option | Type | Description |
 | --- | --- | --- |
-| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |

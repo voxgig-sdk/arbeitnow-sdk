@@ -79,14 +79,12 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'ARBEITNOW_TEST_JOB_ENTID': {},
     'ARBEITNOW_TEST_LIVE': 'FALSE',
-    'ARBEITNOW_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.ARBEITNOW_TEST_LIVE
 
   if (live) {
     const client = new ArbeitnowSDK({
-      apikey: env.ARBEITNOW_APIKEY,
     })
 
     let idmap: any = env['ARBEITNOW_TEST_JOB_ENTID']

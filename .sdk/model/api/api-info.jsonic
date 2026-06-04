@@ -17,8 +17,27 @@ main: {
       ]
       title: "Arbeitnow"
       version: "1.0.0"
+      tagline: "Browse English-speaking job listings across Germany with visa sponsorship, remote, and four-day-week filters"
+      homepage: "https://www.arbeitnow.com/"
+      docs_url: "https://www.arbeitnow.com/api/job-board-api"
+      license_short: "Public job-board feed; check Arbeitnow's site for terms before redistributing listings."
+      license_md: `- No explicit open licence is published with the API
+- Job listings are sourced from Arbeitnow's public board and may carry employer-specific terms
+- Attribution and a link back to arbeitnow.com is the typical expectation for republished postings
+- Confirm current terms at [arbeitnow.com](https://www.arbeitnow.com/) before redistributing data`
+      about_md: `[Arbeitnow](https://www.arbeitnow.com/) is a Berlin-based job board focused on opportunities in Germany and Europe that don't require German-language skills. The site highlights roles offering visa sponsorship, remote work, and four-day work weeks, and exposes the same listings through a public Job Board API.
+
+What you get from the API:
+
+- A feed of currently open job postings aggregated by Arbeitnow
+- Listings annotated with tags such as visa sponsorship, remote, and four-day-week
+- Company, location, and posting metadata suitable for building job boards, aggregators, or analytics
+
+The API is served from \`https://www.arbeitnow.com/api\` and the primary route documented is \`GET /api/job-board-api\`. CORS is enabled and no authentication key is advertised for the public board endpoint, so it can be consumed directly from browser and server clients alike.`
+      entity_desc: {
+        job: "An open job posting from the Arbeitnow board, fetched via `GET /api/job-board-api`, typically including title, company, location, tags (visa, remote, four-day-week), and a link back to the listing."
+      }
+      auth: false
     }
   }
-}
-
 }
