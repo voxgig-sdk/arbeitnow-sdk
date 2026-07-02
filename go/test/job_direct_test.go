@@ -93,12 +93,14 @@ func jobDirectSetup(mockres any) *jobDirectSetupResult {
 	env := envOverride(map[string]any{
 		"ARBEITNOW_TEST_JOB_ENTID": map[string]any{},
 		"ARBEITNOW_TEST_LIVE":    "FALSE",
+		"ARBEITNOW_APIKEY":       "NONE",
 	})
 
 	live := env["ARBEITNOW_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
+			"apikey": env["ARBEITNOW_APIKEY"],
 		}
 		client := sdk.NewArbeitnowSDK(mergedOpts)
 

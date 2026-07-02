@@ -113,6 +113,7 @@ function basicSetup(extra?: any) {
     'ARBEITNOW_TEST_JOB_ENTID': idmap,
     'ARBEITNOW_TEST_LIVE': 'FALSE',
     'ARBEITNOW_TEST_EXPLAIN': 'FALSE',
+    'ARBEITNOW_APIKEY': 'NONE',
   })
 
   idmap = env['ARBEITNOW_TEST_JOB_ENTID']
@@ -122,6 +123,7 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new ArbeitnowSDK(merge([
       {
+        apikey: env.ARBEITNOW_APIKEY,
       },
       extra
     ]))

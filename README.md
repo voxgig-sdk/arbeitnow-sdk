@@ -1,20 +1,8 @@
 # Arbeitnow SDK
 
-Browse English-speaking job listings across Germany with visa sponsorship, remote, and four-day-week filters
+Arbeitnow client, generated from the OpenAPI spec.
 
 > TypeScript, Python, PHP, Golang, Ruby, Lua SDKs, a CLI, an interactive REPL, and an MCP server for AI agents — all generated from one OpenAPI spec by [@voxgig/sdkgen](https://github.com/voxgig/sdkgen).
-
-## About Arbeitnow
-
-[Arbeitnow](https://www.arbeitnow.com/) is a Berlin-based job board focused on opportunities in Germany and Europe that don't require German-language skills. The site highlights roles offering visa sponsorship, remote work, and four-day work weeks, and exposes the same listings through a public Job Board API.
-
-What you get from the API:
-
-- A feed of currently open job postings aggregated by Arbeitnow
-- Listings annotated with tags such as visa sponsorship, remote, and four-day-week
-- Company, location, and posting metadata suitable for building job boards, aggregators, or analytics
-
-The API is served from `https://www.arbeitnow.com/api` and the primary route documented is `GET /api/job-board-api`. CORS is enabled and no authentication key is advertised for the public board endpoint, so it can be consumed directly from browser and server clients alike.
 
 ## Try it
 
@@ -48,29 +36,31 @@ gem install arbeitnow-sdk
 luarocks install arbeitnow-sdk
 ```
 
-## 30-second quickstart
+## Quickstart
 
 ### TypeScript
 
 ```ts
 import { ArbeitnowSDK } from 'arbeitnow'
 
-const client = new ArbeitnowSDK({})
+const client = new ArbeitnowSDK({
+  apikey: process.env.ARBEITNOW_APIKEY,
+})
 
 // List all jobs
 const jobs = await client.Job().list()
+console.log(jobs.data)
 ```
 
-See the [TypeScript README](ts/README.md) for the
-full guide, or scroll down for the same example in other languages.
+See the [TypeScript README](ts/README.md) for the full guide.
 
-## What's in the box
+## Surfaces
 
-| Surface | Use it for | Path |
-| --- | --- | --- |
-| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | App integration | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
-| **CLI** | Scripts, CI, ops, one-off API calls | `go-cli/` |
-| **MCP server** | AI agents (Claude, Cursor, Cline) | `go-mcp/` |
+| Surface | Path |
+| --- | --- |
+| **SDK** (TypeScript, Python, PHP, Golang, Ruby, Lua) | `ts/` `py/` `php/` `go/` `rb/` `lua/` |
+| **CLI** | `go-cli/` |
+| **MCP server** | `go-mcp/` |
 
 ## Use it from an AI agent (MCP)
 
@@ -100,7 +90,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Job** | An open job posting from the Arbeitnow board, fetched via `GET /api/job-board-api`, typically including title, company, location, tags (visa, remote, four-day-week), and a link back to the listing. | `/job-board-api` |
+| **Job** |  | `/job-board-api` |
 
 Each entity supports the following operations where available: **load**,
 **list**, **create**, **update**, and **remove**.
@@ -110,12 +100,16 @@ Each entity supports the following operations where available: **load**,
 ### Python
 
 ```python
+import os
 from arbeitnow_sdk import ArbeitnowSDK
 
-client = ArbeitnowSDK({})
+client = ArbeitnowSDK({
+    "apikey": os.environ.get("ARBEITNOW_APIKEY"),
+})
 
 # List all jobs
-jobs, err = client.Job(None).list(None, None)
+jobs, err = client.Job().list()
+print(jobs)
 ```
 
 ### PHP
@@ -124,10 +118,13 @@ jobs, err = client.Job(None).list(None, None)
 <?php
 require_once 'arbeitnow_sdk.php';
 
-$client = new ArbeitnowSDK([]);
+$client = new ArbeitnowSDK([
+    "apikey" => getenv("ARBEITNOW_APIKEY"),
+]);
 
 // List all jobs
-[$jobs, $err] = $client->Job(null)->list(null, null);
+[$jobs, $err] = $client->Job()->list();
+print_r($jobs);
 ```
 
 ### Golang
@@ -135,10 +132,13 @@ $client = new ArbeitnowSDK([]);
 ```go
 import sdk "github.com/voxgig-sdk/arbeitnow-sdk/go"
 
-client := sdk.NewArbeitnowSDK(map[string]any{})
+client := sdk.NewArbeitnowSDK(map[string]any{
+    "apikey": os.Getenv("ARBEITNOW_APIKEY"),
+})
 
 // List all jobs
 jobs, err := client.Job(nil).List(nil, nil)
+fmt.Println(jobs)
 ```
 
 ### Ruby
@@ -146,10 +146,13 @@ jobs, err := client.Job(nil).List(nil, nil)
 ```ruby
 require_relative "Arbeitnow_sdk"
 
-client = ArbeitnowSDK.new({})
+client = ArbeitnowSDK.new({
+  "apikey" => ENV["ARBEITNOW_APIKEY"],
+})
 
 # List all jobs
-jobs, err = client.Job(nil).list(nil, nil)
+jobs, err = client.Job().list
+puts jobs
 ```
 
 ### Lua
@@ -157,10 +160,13 @@ jobs, err = client.Job(nil).list(nil, nil)
 ```lua
 local sdk = require("arbeitnow_sdk")
 
-local client = sdk.new({})
+local client = sdk.new({
+  apikey = os.getenv("ARBEITNOW_APIKEY"),
+})
 
 -- List all jobs
-local jobs, err = client:Job(nil):list(nil, nil)
+local jobs, err = client:Job():list()
+print(jobs)
 ```
 
 ## Unit testing in offline mode
@@ -179,25 +185,21 @@ const result = await client.Job().load({ id: 'test01' })
 ### Python
 
 ```python
-client = ArbeitnowSDK.test(None, None)
-result, err = client.Job(None).load(
-    {"id": "test01"}, None
-)
+client = ArbeitnowSDK.test()
+result, err = client.Job().load({"id": "test01"})
 ```
 
 ### PHP
 
 ```php
-$client = ArbeitnowSDK::test(null, null);
-[$result, $err] = $client->Job(null)->load(
-    ["id" => "test01"], null
-);
+$client = ArbeitnowSDK::test();
+[$result, $err] = $client->Job()->load(["id" => "test01"]);
 ```
 
 ### Golang
 
 ```go
-client := sdk.TestSDK(nil, nil)
+client := sdk.Test()
 result, err := client.Job(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
@@ -206,19 +208,15 @@ result, err := client.Job(nil).Load(
 ### Ruby
 
 ```ruby
-client = ArbeitnowSDK.test(nil, nil)
-result, err = client.Job(nil).load(
-  { "id" => "test01" }, nil
-)
+client = ArbeitnowSDK.test
+result, err = client.Job().load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
-local client = sdk.test(nil, nil)
-local result, err = client:Job(nil):load(
-  { id = "test01" }, nil
-)
+local client = sdk.test()
+local result, err = client:Job():load({ id = "test01" })
 ```
 
 ## How it works
@@ -322,16 +320,6 @@ local result, err = client:direct({
 - [Golang](go/README.md)
 - [Ruby](rb/README.md)
 - [Lua](lua/README.md)
-
-## Using the Arbeitnow
-
-- Upstream: [https://www.arbeitnow.com/](https://www.arbeitnow.com/)
-- API docs: [https://www.arbeitnow.com/api/job-board-api](https://www.arbeitnow.com/api/job-board-api)
-
-- No explicit open licence is published with the API
-- Job listings are sourced from Arbeitnow's public board and may carry employer-specific terms
-- Attribution and a link back to arbeitnow.com is the typical expectation for republished postings
-- Confirm current terms at [arbeitnow.com](https://www.arbeitnow.com/) before redistributing data
 
 ---
 

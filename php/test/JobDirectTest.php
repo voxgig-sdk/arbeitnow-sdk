@@ -68,12 +68,14 @@ function job_direct_setup($mockres)
     $env = Runner::env_override([
         "ARBEITNOW_TEST_JOB_ENTID" => [],
         "ARBEITNOW_TEST_LIVE" => "FALSE",
+        "ARBEITNOW_APIKEY" => "NONE",
     ]);
 
     $live = $env["ARBEITNOW_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [
+            "apikey" => $env["ARBEITNOW_APIKEY"],
         ];
         $client = new ArbeitnowSDK($merged_opts);
         return [
