@@ -8,12 +8,14 @@ source = {
   dir = "arbeitnow-sdk/lua"
 }
 description = {
-  summary = "Arbeitnow SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the Arbeitnow public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/arbeitnow-sdk",
+  issues_url = "https://github.com/voxgig-sdk/arbeitnow-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "arbeitnow" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

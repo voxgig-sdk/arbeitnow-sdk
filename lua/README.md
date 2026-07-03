@@ -10,7 +10,7 @@ The Lua SDK for the Arbeitnow API — an entity-oriented client using Lua conven
 
 ## Install
 ```bash
-luarocks install arbeitnow-sdk
+luarocks install voxgig-sdk-arbeitnow
 ```
 
 If the module is not yet published, add the source directory to

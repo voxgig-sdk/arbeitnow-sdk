@@ -10,7 +10,7 @@ The Python SDK for the Arbeitnow API — an entity-oriented client following Pyt
 
 ## Install
 ```bash
-pip install arbeitnow-sdk
+pip install voxgig-sdk-arbeitnow
 ```
 
 Or install from source:

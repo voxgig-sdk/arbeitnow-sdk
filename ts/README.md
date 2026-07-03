@@ -10,7 +10,7 @@ The TypeScript SDK for the Arbeitnow API — a type-safe, entity-oriented client
 
 ## Install
 ```bash
-npm install arbeitnow
+npm install @voxgig-sdk/arbeitnow
 ```
 ## Tutorial: your first API call
 

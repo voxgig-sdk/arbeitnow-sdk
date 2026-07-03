@@ -10,13 +10,13 @@ The Ruby SDK for the Arbeitnow API — an entity-oriented client using idiomatic
 
 ## Install
 ```bash
-gem install arbeitnow-sdk
+gem install voxgig-sdk-arbeitnow
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "arbeitnow-sdk"
+gem "voxgig-sdk-arbeitnow"
 ```
 
 Then run:

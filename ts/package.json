@@ -1,7 +1,23 @@
 {
   "name": "@voxgig-sdk/arbeitnow",
   "version": "0.0.1",
-  "description": "DESCRIPTION",
+  "description": "Unofficial generated TypeScript SDK for the Arbeitnow public API. Not affiliated with or endorsed by the upstream API provider.",
+  "keywords": [
+    "voxgig",
+    "sdk",
+    "generated-sdk",
+    "openapi",
+    "api-client",
+    "arbeitnow"
+  ],
+  "homepage": "https://github.com/voxgig-sdk/arbeitnow-sdk#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voxgig-sdk/arbeitnow-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/voxgig-sdk/arbeitnow-sdk/issues"
+  },
   "main": "dist/ArbeitnowSDK.js",
   "type": "commonjs",
   "types": "dist/ArbeitnowSDK.d.ts",
@@ -14,7 +30,10 @@
     "clean": "rm -rf node_modules yarn.lock package-lock.json",
     "reset": "npm run clean && npm i && npm run build && npm test"
   },
-  "author": "Arbeitnow",
+  "author": {
+    "name": "Voxgig",
+    "url": "https://voxgig.com"
+  },
   "license": "MIT",
   "dependencies": {},
   "peerDependencies": {},
