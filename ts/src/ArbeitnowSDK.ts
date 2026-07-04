@@ -2,6 +2,8 @@
 
 import { JobEntity } from './entity/JobEntity'
 
+export type * from './ArbeitnowTypes'
+
 
 import { inspect } from 'node:util'
 
@@ -202,6 +204,14 @@ class ArbeitnowSDK {
 
 
 
+  _job?: JobEntity
+
+  // Idiomatic facade: `client.job.list()` / `client.job.load({ id })`.
+  get job(): JobEntity {
+    return (this._job ??= new JobEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.job` instead. */
   Job(data?: any) {
     const self = this
     return new JobEntity(self,data)

@@ -244,6 +244,19 @@ end
 
 
 
+-- Idiomatic facade: client:job():list() / client:job():load({ id = ... })
+function ArbeitnowSDK:job(data)
+  local EntityMod = require("entity.job_entity")
+  if data == nil then
+    if self._job == nil then
+      self._job = EntityMod.new(self, nil)
+    end
+    return self._job
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:job() instead.
 function ArbeitnowSDK:Job(data)
   local EntityMod = require("entity.job_entity")
   return EntityMod.new(self, data)

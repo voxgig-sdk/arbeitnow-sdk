@@ -245,6 +245,9 @@ func (sdk *ArbeitnowSDK) Direct(fetchargs map[string]any) (map[string]any, error
 }
 
 
+// Job returns a Job entity bound to this client.
+// Idiomatic usage: client.Job(nil).List(nil, nil) or
+// client.Job(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *ArbeitnowSDK) Job(data map[string]any) ArbeitnowEntity {
 	return NewJobEntityFunc(sdk, data)
 }

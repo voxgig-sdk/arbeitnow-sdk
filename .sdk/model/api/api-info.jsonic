@@ -4,6 +4,7 @@
 main: {
   kit: {
     info: {
+      auth: false
       contact: {
         name: "Arbeitnow API Documentation"
         url: "https://documenter.getpostman.com/view/18545278/UVJbJdKh"

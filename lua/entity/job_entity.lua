@@ -81,6 +81,10 @@ end
 
 
 
+---@param reqmatch JobListMatch
+---@param ctrl? table
+---@return Job[]
+---@return string? err
 function JobEntity:list(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

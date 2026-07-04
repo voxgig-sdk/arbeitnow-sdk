@@ -50,8 +50,7 @@ class JobEntityTest extends TestCase
         $job_ref01_ent = $client->Job(null);
         $job_ref01_match = [];
 
-        [$job_ref01_list_result, $err] = $job_ref01_ent->list($job_ref01_match, null);
-        $this->assertNull($err);
+        $job_ref01_list_result = $job_ref01_ent->list($job_ref01_match, null);
         $this->assertIsArray($job_ref01_list_result);
 
     }
@@ -86,7 +85,6 @@ function job_basic_setup($extra)
         "ARBEITNOW_TEST_JOB_ENTID" => $idmap,
         "ARBEITNOW_TEST_LIVE" => "FALSE",
         "ARBEITNOW_TEST_EXPLAIN" => "FALSE",
-        "ARBEITNOW_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -98,7 +96,6 @@ function job_basic_setup($extra)
     if ($env["ARBEITNOW_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["ARBEITNOW_APIKEY"],
             ],
             $extra ?? [],
         ]);

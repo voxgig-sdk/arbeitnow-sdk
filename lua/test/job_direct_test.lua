@@ -63,14 +63,12 @@ function job_direct_setup(mockres)
   local env = runner.env_override({
     ["ARBEITNOW_TEST_JOB_ENTID"] = {},
     ["ARBEITNOW_TEST_LIVE"] = "FALSE",
-    ["ARBEITNOW_APIKEY"] = "NONE",
   })
 
   local live = env["ARBEITNOW_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
-      apikey = env["ARBEITNOW_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

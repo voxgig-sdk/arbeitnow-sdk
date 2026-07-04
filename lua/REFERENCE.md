@@ -19,7 +19,6 @@ Create a new SDK client instance.
 | Name | Type | Description |
 | --- | --- | --- |
 | `options` | `table` | SDK configuration options. |
-| `options.apikey` | `string` | API key for authentication. |
 | `options.base` | `string` | Base URL for API requests. |
 | `options.prefix` | `string` | URL prefix appended after base. |
 | `options.suffix` | `string` | URL suffix appended after path. |
@@ -84,7 +83,7 @@ same parameters as `direct()`.
 ## JobEntity
 
 ```lua
-local job = client:Job(nil)
+local job = client:job(nil)
 ```
 
 ### Fields
@@ -109,7 +108,7 @@ local job = client:Job(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:Job():list()
+local results, err = client:job():list()
 ```
 
 ### Common Methods
