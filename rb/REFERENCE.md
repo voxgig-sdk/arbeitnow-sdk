@@ -86,7 +86,7 @@ same parameters as `direct()`. Raises on error.
 ## JobEntity
 
 ```ruby
-job = client.job
+job = client.Job
 ```
 
 ### Fields
@@ -111,7 +111,7 @@ job = client.job
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.job.list(nil)
+results = client.Job.list(nil)
 ```
 
 ### Common Methods

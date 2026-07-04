@@ -80,7 +80,7 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 ## JobEntity
 
 ```python
-job = client.job
+job = client.Job()
 ```
 
 ### Fields
@@ -105,7 +105,9 @@ job = client.job
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.job.list({})
+results = client.Job().list({})
+for job in results:
+    print(job)
 ```
 
 ### Common Methods

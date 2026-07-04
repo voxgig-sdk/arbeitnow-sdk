@@ -204,14 +204,7 @@ class ArbeitnowSDK {
 
 
 
-  _job?: JobEntity
-
-  // Idiomatic facade: `client.job.list()` / `client.job.load({ id })`.
-  get job(): JobEntity {
-    return (this._job ??= new JobEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.job` instead. */
+  // Entity access: `client.Job().list()` / `client.Job().load({ id })`.
   Job(data?: any) {
     const self = this
     return new JobEntity(self,data)

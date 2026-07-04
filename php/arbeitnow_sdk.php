@@ -233,10 +233,10 @@ class ArbeitnowSDK
 
     private $_job = null;
 
-    // Idiomatic facade: $client->job()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Job() (PHP method
-    // names are case-insensitive).
-    public function job($data = null)
+    // Canonical facade: $client->Job()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->job()
+    // resolves here too.
+    public function Job($data = null)
     {
         require_once __DIR__ . '/entity/job_entity.php';
         if ($data === null) {

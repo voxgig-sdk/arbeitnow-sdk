@@ -220,25 +220,15 @@ class ArbeitnowSDK:
         }
 
 
-    @property
-    def job(self):
-        """Idiomatic facade: client.job.list() / client.job.load({"id": ...})."""
-        from entity.job_entity import JobEntity
-        cached = getattr(self, "_job", None)
-        if cached is None:
-            cached = JobEntity(self, None)
-            self._job = cached
-        return cached
-
-    def Job(self, data=None):
-        # Deprecated: use client.job instead.
+    def Job(self, data=None) -> "JobEntity":
+        """Entity factory: client.Job().list({}) / client.Job().load({"id": ...})."""
         from entity.job_entity import JobEntity
         return JobEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "ArbeitnowSDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -258,3 +248,9 @@ class ArbeitnowSDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.job_entity import JobEntity

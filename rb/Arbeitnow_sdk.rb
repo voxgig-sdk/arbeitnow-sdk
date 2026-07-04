@@ -208,13 +208,7 @@ class ArbeitnowSDK
   end
 
 
-  # Idiomatic facade: client.job.list / client.job.load({ "id" => ... })
-  def job
-    require_relative 'entity/job_entity'
-    @job ||= JobEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.job instead.
+  # Canonical facade: client.Job.list / client.Job.load({ "id" => ... })
   def Job(data = nil)
     require_relative 'entity/job_entity'
     JobEntity.new(self, data)

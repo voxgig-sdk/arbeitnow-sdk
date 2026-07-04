@@ -28,16 +28,14 @@ require_relative "Arbeitnow_sdk"
 client = ArbeitnowSDK.new
 ```
 
-### 2. List jobs
+### 2. List job records
 
 ```ruby
 begin
-  result = client.job.list
-  if result.is_a?(Array)
-    result.each do |item|
-      d = item.data_get
-      puts "#{d["id"]} #{d["name"]}"
-    end
+  # list returns an Array of Job records — iterate directly.
+  jobs = client.Job.list
+  jobs.each do |item|
+    puts "#{item["id"]} #{item["name"]}"
   end
 rescue => err
   warn "list failed: #{err}"
@@ -85,13 +83,17 @@ end
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```ruby
-client = ArbeitnowSDK.test
+client = ArbeitnowSDK.test({
+  "entity" => { "job" => { "test01" => { "id" => "test01" } } },
+})
 
-result = client.job.load({ "id" => "test01" })
-# result contains mock response data
+# load returns the bare mock record (raises on error).
+job = client.Job.load({ "id" => "test01" })
+puts job
 ```
 
 ### Use a custom fetch function
@@ -232,7 +234,7 @@ API path: `/job-board-api`
 
 ### Job
 
-Create an instance: `const job = client.job`
+Create an instance: `job = client.Job`
 
 #### Operations
 
@@ -257,8 +259,9 @@ Create an instance: `const job = client.job`
 
 #### Example: List
 
-```ts
-const jobs = await client.job.list()
+```ruby
+# list returns an Array of Job records (raises on error).
+jobs = client.Job.list
 ```
 
 
@@ -333,7 +336,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```ruby
-job = client.job
+job = client.Job
 job.load({ "id" => "example_id" })
 
 # job.data_get now returns the loaded job data

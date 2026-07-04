@@ -85,7 +85,7 @@ Prepare a fetch definition without sending the request. Returns the
 ## JobEntity
 
 ```php
-$job = $client->job();
+$job = $client->Job();
 ```
 
 ### Fields
@@ -110,7 +110,7 @@ $job = $client->job();
 List entities matching the given criteria. Returns an array. Throws on error.
 
 ```php
-$results = $client->job()->list([]);
+$results = $client->Job()->list([]);
 ```
 
 ### Common Methods

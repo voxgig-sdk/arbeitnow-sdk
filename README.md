@@ -26,9 +26,11 @@ import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow'
 
 const client = new ArbeitnowSDK()
 
-// List all jobs
-const jobs = await client.job.list()
-console.log(jobs.data)
+// List all jobs (returns Job[])
+const jobs = await client.Job().list()
+for (const job of jobs) {
+  console.log(job)
+}
 ```
 
 See the [TypeScript README](ts/README.md) for the full guide.
@@ -83,9 +85,10 @@ from arbeitnow_sdk import ArbeitnowSDK
 
 client = ArbeitnowSDK()
 
-# List all jobs
-jobs = client.job.list()
-print(jobs)
+# List all jobs (returns a list, raises on error)
+jobs = client.Job().list({})
+for job in jobs:
+    print(job)
 ```
 
 ### PHP
@@ -96,8 +99,8 @@ require_once 'arbeitnow_sdk.php';
 
 $client = new ArbeitnowSDK();
 
-// List all jobs (throws on error)
-$jobs = $client->job()->list();
+// List all jobs (returns an array; throws on error)
+$jobs = $client->Job()->list();
 print_r($jobs);
 ```
 
@@ -120,8 +123,8 @@ require_relative "Arbeitnow_sdk"
 
 client = ArbeitnowSDK.new
 
-# List all jobs
-jobs = client.job.list
+# List all jobs (returns an Array; raises on error)
+jobs = client.Job.list
 puts jobs
 ```
 
@@ -133,7 +136,7 @@ local sdk = require("arbeitnow_sdk")
 local client = sdk.new()
 
 -- List all jobs
-local jobs, err = client:job():list()
+local jobs, err = client:Job():list()
 print(jobs)
 ```
 
@@ -146,22 +149,27 @@ in-memory mock, so unit tests run offline.
 
 ```ts
 const client = ArbeitnowSDK.test()
-const result = await client.job.load({ id: 'test01' })
-// result.ok === true, result.data contains mock data
+const job = await client.Job().load({ id: 'test01' })
+// job is a bare Job populated with mock data
+console.log(job)
 ```
 
 ### Python
 
 ```python
 client = ArbeitnowSDK.test()
-result = client.job.load({"id": "test01"})
+job = client.Job().load({"id": "test01"})
+print(job)
 ```
 
 ### PHP
 
 ```php
-$client = ArbeitnowSDK::test();
-$result = $client->job()->load(["id" => "test01"]);
+// Seed fixture data so offline calls resolve without a live server.
+$client = ArbeitnowSDK::test([
+    "entity" => ["job" => ["test01" => ["id" => "test01"]]],
+]);
+$job = $client->Job()->load(["id" => "test01"]);
 ```
 
 ### Golang
@@ -176,15 +184,18 @@ result, err := client.Job(nil).Load(
 ### Ruby
 
 ```ruby
-client = ArbeitnowSDK.test
-result = client.job.load({ "id" => "test01" })
+# Seed fixture data so offline calls resolve without a live server.
+client = ArbeitnowSDK.test({
+  "entity" => { "job" => { "test01" => { "id" => "test01" } } },
+})
+job = client.Job.load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
 local client = sdk.test()
-local result, err = client:job():load({ id = "test01" })
+local result, err = client:Job():load({ id = "test01" })
 ```
 
 ## How it works
@@ -232,6 +243,9 @@ const result = await client.direct({
   method: 'GET',
   params: { id: 'example' },
 })
+if (result instanceof Error) {
+  throw result
+}
 console.log(result.data)
 ```
 
