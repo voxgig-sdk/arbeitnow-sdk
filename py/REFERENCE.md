@@ -87,25 +87,25 @@ job = client.Job()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | ``$STRING`` | No |  |
-| `created_at` | ``$INTEGER`` | No |  |
-| `description` | ``$STRING`` | No |  |
-| `job_type` | ``$ARRAY`` | No |  |
-| `location` | ``$STRING`` | No |  |
-| `remote` | ``$BOOLEAN`` | No |  |
-| `slug` | ``$STRING`` | No |  |
-| `tag` | ``$ARRAY`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `url` | ``$STRING`` | No |  |
+| `company_name` | `str` | No |  |
+| `created_at` | `int` | No |  |
+| `description` | `str` | No |  |
+| `job_type` | `list` | No |  |
+| `location` | `str` | No |  |
+| `remote` | `bool` | No |  |
+| `slug` | `str` | No |  |
+| `tag` | `list` | No |  |
+| `title` | `str` | No |  |
+| `url` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Job().list({})
+results = client.Job().list()
 for job in results:
     print(job)
 ```

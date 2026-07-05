@@ -221,7 +221,7 @@ class ArbeitnowSDK:
 
 
     def Job(self, data=None) -> "JobEntity":
-        """Entity factory: client.Job().list({}) / client.Job().load({"id": ...})."""
+        """Entity factory: client.Job().list() / client.Job().load({"id": ...})."""
         from entity.job_entity import JobEntity
         return JobEntity(self, data)
 

@@ -27,7 +27,7 @@ class Job
     public ?string $url = null;
 }
 
-/** Match filter for Job#list (any subset of Job fields). */
+/** Request payload for Job#list. */
 class JobListMatch
 {
     public ?string $company_name = null;

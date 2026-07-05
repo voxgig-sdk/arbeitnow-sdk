@@ -116,16 +116,16 @@ const job = client.Job()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | ``$STRING`` | No |  |
-| `created_at` | ``$INTEGER`` | No |  |
-| `description` | ``$STRING`` | No |  |
-| `job_type` | ``$ARRAY`` | No |  |
-| `location` | ``$STRING`` | No |  |
-| `remote` | ``$BOOLEAN`` | No |  |
-| `slug` | ``$STRING`` | No |  |
-| `tag` | ``$ARRAY`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `url` | ``$STRING`` | No |  |
+| `company_name` | `string` | No |  |
+| `created_at` | `number` | No |  |
+| `description` | `string` | No |  |
+| `job_type` | `any[]` | No |  |
+| `location` | `string` | No |  |
+| `remote` | `boolean` | No |  |
+| `slug` | `string` | No |  |
+| `tag` | `any[]` | No |  |
+| `title` | `string` | No |  |
+| `url` | `string` | No |  |
 
 ### Operations
 

@@ -18,5 +18,16 @@ export interface Job {
   url?: string
 }
 
-export type JobListMatch = Partial<Job>
+export interface JobListMatch {
+  company_name?: string
+  created_at?: number
+  description?: string
+  job_type?: any[]
+  location?: string
+  remote?: boolean
+  slug?: string
+  tag?: any[]
+  title?: string
+  url?: string
+}
 

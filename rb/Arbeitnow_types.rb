@@ -53,7 +53,7 @@ Job = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Job#list (any subset of Job fields).
+# Request payload for Job#list.
 #
 # @!attribute [rw] company_name
 #   @return [String, nil]

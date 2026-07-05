@@ -8,7 +8,7 @@ Complete API reference for the Arbeitnow Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'arbeitnow_sdk'
+require_relative 'Arbeitnow_sdk'
 
 client = ArbeitnowSDK.new(options)
 ```
@@ -93,25 +93,25 @@ job = client.Job
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | ``$STRING`` | No |  |
-| `created_at` | ``$INTEGER`` | No |  |
-| `description` | ``$STRING`` | No |  |
-| `job_type` | ``$ARRAY`` | No |  |
-| `location` | ``$STRING`` | No |  |
-| `remote` | ``$BOOLEAN`` | No |  |
-| `slug` | ``$STRING`` | No |  |
-| `tag` | ``$ARRAY`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `url` | ``$STRING`` | No |  |
+| `company_name` | `String` | No |  |
+| `created_at` | `Integer` | No |  |
+| `description` | `String` | No |  |
+| `job_type` | `Array` | No |  |
+| `location` | `String` | No |  |
+| `remote` | `Boolean` | No |  |
+| `slug` | `String` | No |  |
+| `tag` | `Array` | No |  |
+| `title` | `String` | No |  |
+| `url` | `String` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl = nil) -> Array`
+#### `list(reqmatch = nil, ctrl = nil) -> Array`
 
-List entities matching the given criteria. Returns an array. Raises on error.
+List entities matching the given criteria (call with no argument to list all). Returns an array. Raises on error.
 
 ```ruby
-results = client.Job.list(nil)
+results = client.Job.list
 ```
 
 ### Common Methods
