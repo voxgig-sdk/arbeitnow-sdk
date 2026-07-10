@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -279,14 +276,17 @@
           "url": "https://documenter.getpostman.com/view/18545278/UVJbJdKh"
         },
         "description": "Arbeitnow helps companies hire candidates with visa sponsorship / four day work week / remote opportunities.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://www.arbeitnow.com/api"
           }
         ],
+        "summary": "Arbeitnow helps companies hire candidates with visa sponsorship / four day work week / remote opportunities.",
         "title": "Arbeitnow",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "website": "https://arbeitnow.com"
       },
       "option": {},
       "target": {
@@ -339,6 +339,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -389,6 +392,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },

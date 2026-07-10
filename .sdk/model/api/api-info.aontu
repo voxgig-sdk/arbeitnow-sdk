@@ -16,9 +16,9 @@ main: {
           url: "https://www.arbeitnow.com/api"
         }
       ]
+      summary: "Arbeitnow helps companies hire candidates with visa sponsorship / four day work week / remote opportunities."
       title: "Arbeitnow"
       version: "1.0.0"
+      website: "https://arbeitnow.com"
     }
   }
-}
-
