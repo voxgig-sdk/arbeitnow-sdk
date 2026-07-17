@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- Arbeitnow SDK exists test
 
 local sdk = require("arbeitnow_sdk")
 
