@@ -18,11 +18,11 @@ class Job
     public ?string $company_name = null;
     public ?int $created_at = null;
     public ?string $description = null;
-    public ?array $job_type = null;
+    public ?array $job_types = null;
     public ?string $location = null;
     public ?bool $remote = null;
     public ?string $slug = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $title = null;
     public ?string $url = null;
 }
@@ -33,11 +33,11 @@ class JobListMatch
     public ?string $company_name = null;
     public ?int $created_at = null;
     public ?string $description = null;
-    public ?array $job_type = null;
+    public ?array $job_types = null;
     public ?string $location = null;
     public ?bool $remote = null;
     public ?string $slug = null;
-    public ?array $tag = null;
+    public ?array $tags = null;
     public ?string $title = null;
     public ?string $url = null;
 }

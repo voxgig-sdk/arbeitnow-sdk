@@ -47,7 +47,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "job_type",
+            ["name"] = "job_types",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 3,
@@ -75,7 +75,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "tag",
+            ["name"] = "tags",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 7,
@@ -132,6 +132,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/job-board-api",
                 ["parts"] = {

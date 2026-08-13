@@ -19,7 +19,7 @@
 # @!attribute [rw] description
 #   @return [String, nil]
 #
-# @!attribute [rw] job_type
+# @!attribute [rw] job_types
 #   @return [Array, nil]
 #
 # @!attribute [rw] location
@@ -31,7 +31,7 @@
 # @!attribute [rw] slug
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] title
@@ -43,11 +43,11 @@ Job = Struct.new(
   :company_name,
   :created_at,
   :description,
-  :job_type,
+  :job_types,
   :location,
   :remote,
   :slug,
-  :tag,
+  :tags,
   :title,
   :url,
   keyword_init: true
@@ -64,7 +64,7 @@ Job = Struct.new(
 # @!attribute [rw] description
 #   @return [String, nil]
 #
-# @!attribute [rw] job_type
+# @!attribute [rw] job_types
 #   @return [Array, nil]
 #
 # @!attribute [rw] location
@@ -76,7 +76,7 @@ Job = Struct.new(
 # @!attribute [rw] slug
 #   @return [String, nil]
 #
-# @!attribute [rw] tag
+# @!attribute [rw] tags
 #   @return [Array, nil]
 #
 # @!attribute [rw] title
@@ -88,11 +88,11 @@ JobListMatch = Struct.new(
   :company_name,
   :created_at,
   :description,
-  :job_type,
+  :job_types,
   :location,
   :remote,
   :slug,
-  :tag,
+  :tags,
   :title,
   :url,
   keyword_init: true

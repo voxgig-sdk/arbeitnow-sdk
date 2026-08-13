@@ -63,7 +63,7 @@ describe('JobEntity', async () => {
     const job_ref01_ent = client.Job()
     const job_ref01_match: any = {}
 
-    const job_ref01_list = await job_ref01_ent.list(job_ref01_match)
+    const job_ref01_list = (await job_ref01_ent.list(job_ref01_match)).map((e: any) => e.data())
 
 
   })

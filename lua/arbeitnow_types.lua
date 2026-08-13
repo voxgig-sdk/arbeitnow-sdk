@@ -10,11 +10,11 @@
 ---@field company_name? string
 ---@field created_at? number
 ---@field description? string
----@field job_type? table
+---@field job_types? table
 ---@field location? string
 ---@field remote? boolean
 ---@field slug? string
----@field tag? table
+---@field tags? table
 ---@field title? string
 ---@field url? string
 
@@ -22,11 +22,11 @@
 ---@field company_name? string
 ---@field created_at? number
 ---@field description? string
----@field job_type? table
+---@field job_types? table
 ---@field location? string
 ---@field remote? boolean
 ---@field slug? string
----@field tag? table
+---@field tags? table
 ---@field title? string
 ---@field url? string
 

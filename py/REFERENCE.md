@@ -90,11 +90,11 @@ job = client.Job()
 | `company_name` | `str` | No |  |
 | `created_at` | `int` | No |  |
 | `description` | `str` | No |  |
-| `job_type` | `list` | No |  |
+| `job_types` | `list` | No |  |
 | `location` | `str` | No |  |
 | `remote` | `bool` | No |  |
 | `slug` | `str` | No |  |
-| `tag` | `list` | No |  |
+| `tags` | `list` | No |  |
 | `title` | `str` | No |  |
 | `url` | `str` | No |  |
 

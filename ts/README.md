@@ -35,7 +35,9 @@ const client = new ArbeitnowSDK()
 
 ### 2. List job records
 
-`list()` resolves to an array of Job objects — iterate it directly:
+`list()` resolves to an array of Job ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const jobs = await client.Job().list()
@@ -120,7 +122,8 @@ Create a mock client for unit testing — no server required:
 const client = ArbeitnowSDK.test()
 
 const job = await client.Job().list()
-// job is a bare entity populated with mock response data
+// job is the entity, populated with mock response data
+// — call job.data() for the record itself
 console.log(job)
 ```
 
@@ -287,11 +290,11 @@ The `prepare()` method returns:
 | `company_name` |  |
 | `created_at` |  |
 | `description` |  |
-| `job_type` |  |
+| `job_types` |  |
 | `location` |  |
 | `remote` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 | `url` |  |
 
@@ -321,11 +324,11 @@ Create an instance: `const job = client.Job()`
 | `company_name` | `string` |  |
 | `created_at` | `number` |  |
 | `description` | `string` |  |
-| `job_type` | `any[]` |  |
+| `job_types` | `any[]` |  |
 | `location` | `string` |  |
 | `remote` | `boolean` |  |
 | `slug` | `string` |  |
-| `tag` | `any[]` |  |
+| `tags` | `any[]` |  |
 | `title` | `string` |  |
 | `url` | `string` |  |
 

@@ -9,11 +9,11 @@ export interface Job {
   company_name?: string
   created_at?: number
   description?: string
-  job_type?: any[]
+  job_types?: any[]
   location?: string
   remote?: boolean
   slug?: string
-  tag?: any[]
+  tags?: any[]
   title?: string
   url?: string
 }
@@ -22,11 +22,11 @@ export interface JobListMatch {
   company_name?: string
   created_at?: number
   description?: string
-  job_type?: any[]
+  job_types?: any[]
   location?: string
   remote?: boolean
   slug?: string
-  tag?: any[]
+  tags?: any[]
   title?: string
   url?: string
 }

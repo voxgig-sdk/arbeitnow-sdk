@@ -37,7 +37,7 @@ class JobEntity extends ArbeitnowEntityBase<Job> {
 
 
 
-  async list(this: any, reqmatch?: JobListMatch, ctrl?: Control): Promise<Job[]> {
+  async list(this: any, reqmatch?: JobListMatch, ctrl?: Control): Promise<JobEntity[]> {
 
     const utility = this._utility
 

@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = ArbeitnowSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = ArbeitnowSDK.test({
+  entity: {
+    job: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const jobs = await client.Job().list()
-// jobs is an array of bare Job records populated with mock data
+// jobs is an array of Job entities, populated with mock data
+// — call jobs[0].data() for the record itself
 console.log(jobs)
 ```
 
@@ -110,7 +119,7 @@ import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow'
 
 const client = new ArbeitnowSDK()
 
-// List all jobs (returns Job[])
+// List all jobs (returns JobEntity[] — .data() for the record)
 const jobs = await client.Job().list()
 for (const job of jobs) {
   console.log(job)
@@ -343,6 +352,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://documenter.getpostman.com/view/18545278/UVJbJdKh](https://documenter.getpostman.com/view/18545278/UVJbJdKh)
 

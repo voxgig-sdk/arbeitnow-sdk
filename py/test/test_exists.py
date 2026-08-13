@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Arbeitnow SDK exists test
 
 import pytest
 from arbeitnow_sdk import ArbeitnowSDK

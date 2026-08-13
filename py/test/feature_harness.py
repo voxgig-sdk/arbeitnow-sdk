@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import ArbeitnowControl
-from core.error import ArbeitnowError
-from core.result import ArbeitnowResult
-from core.spec import ArbeitnowSpec
+from arbeitnow_sdk.config import make_config
+from arbeitnow_sdk.features import _make_feature
+from arbeitnow_sdk.core.control import ArbeitnowControl
+from arbeitnow_sdk.core.error import ArbeitnowError
+from arbeitnow_sdk.core.result import ArbeitnowResult
+from arbeitnow_sdk.core.spec import ArbeitnowSpec
 
 
 # True when this SDK was generated with the named feature.

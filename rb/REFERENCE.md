@@ -96,11 +96,11 @@ job = client.Job
 | `company_name` | `String` | No |  |
 | `created_at` | `Integer` | No |  |
 | `description` | `String` | No |  |
-| `job_type` | `Array` | No |  |
+| `job_types` | `Array` | No |  |
 | `location` | `String` | No |  |
 | `remote` | `Boolean` | No |  |
 | `slug` | `String` | No |  |
-| `tag` | `Array` | No |  |
+| `tags` | `Array` | No |  |
 | `title` | `String` | No |  |
 | `url` | `String` | No |  |
 

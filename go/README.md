@@ -263,11 +263,11 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | `"company_name"` |  |
 | `"created_at"` |  |
 | `"description"` |  |
-| `"job_type"` |  |
+| `"job_types"` |  |
 | `"location"` |  |
 | `"remote"` |  |
 | `"slug"` |  |
-| `"tag"` |  |
+| `"tags"` |  |
 | `"title"` |  |
 | `"url"` |  |
 
@@ -297,11 +297,11 @@ Create an instance: `job := client.Job(nil)`
 | `company_name` | `string` |  |
 | `created_at` | `int` |  |
 | `description` | `string` |  |
-| `job_type` | `[]any` |  |
+| `job_types` | `[]any` |  |
 | `location` | `string` |  |
 | `remote` | `bool` |  |
 | `slug` | `string` |  |
-| `tag` | `[]any` |  |
+| `tags` | `[]any` |  |
 | `title` | `string` |  |
 | `url` | `string` |  |
 

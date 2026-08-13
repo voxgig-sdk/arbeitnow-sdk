@@ -101,11 +101,11 @@ fmt.Println(job.GetName()) // "job"
 | `company_name` | `string` | No |  |
 | `created_at` | `int` | No |  |
 | `description` | `string` | No |  |
-| `job_type` | `[]any` | No |  |
+| `job_types` | `[]any` | No |  |
 | `location` | `string` | No |  |
 | `remote` | `bool` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `[]any` | No |  |
+| `tags` | `[]any` | No |  |
 | `title` | `string` | No |  |
 | `url` | `string` | No |  |
 

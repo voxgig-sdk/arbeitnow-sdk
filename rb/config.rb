@@ -48,7 +48,7 @@ module ArbeitnowConfig
             },
             {
               "active" => true,
-              "name" => "job_type",
+              "name" => "job_types",
               "req" => false,
               "type" => "`$ARRAY`",
               "index$" => 3,
@@ -76,7 +76,7 @@ module ArbeitnowConfig
             },
             {
               "active" => true,
-              "name" => "tag",
+              "name" => "tags",
               "req" => false,
               "type" => "`$ARRAY`",
               "index$" => 7,
@@ -133,6 +133,7 @@ module ArbeitnowConfig
                       },
                     ],
                   },
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/job-board-api",
                   "parts" => [

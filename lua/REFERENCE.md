@@ -93,11 +93,11 @@ local job = client:Job(nil)
 | `company_name` | `string` | No |  |
 | `created_at` | `number` | No |  |
 | `description` | `string` | No |  |
-| `job_type` | `table` | No |  |
+| `job_types` | `table` | No |  |
 | `location` | `string` | No |  |
 | `remote` | `boolean` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `table` | No |  |
+| `tags` | `table` | No |  |
 | `title` | `string` | No |  |
 | `url` | `string` | No |  |
 

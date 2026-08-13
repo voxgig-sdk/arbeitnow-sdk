@@ -119,7 +119,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = ArbeitnowSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 job = client.Job.list()
 puts job
 ```
@@ -239,11 +240,11 @@ returns a result `Hash` with these keys:
 | `company_name` |  |
 | `created_at` |  |
 | `description` |  |
-| `job_type` |  |
+| `job_types` |  |
 | `location` |  |
 | `remote` |  |
 | `slug` |  |
-| `tag` |  |
+| `tags` |  |
 | `title` |  |
 | `url` |  |
 
@@ -273,11 +274,11 @@ Create an instance: `job = client.Job`
 | `company_name` | `String` |  |
 | `created_at` | `Integer` |  |
 | `description` | `String` |  |
-| `job_type` | `Array` |  |
+| `job_types` | `Array` |  |
 | `location` | `String` |  |
 | `remote` | `Boolean` |  |
 | `slug` | `String` |  |
-| `tag` | `Array` |  |
+| `tags` | `Array` |  |
 | `title` | `String` |  |
 | `url` | `String` |  |
 

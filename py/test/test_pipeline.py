@@ -16,11 +16,11 @@
 import pytest
 
 from arbeitnow_sdk import ArbeitnowSDK
-from core.error import ArbeitnowError
-from core.result import ArbeitnowResult
-from core.response import ArbeitnowResponse
-from core.spec import ArbeitnowSpec
-from feature.base_feature import ArbeitnowBaseFeature
+from arbeitnow_sdk.core.error import ArbeitnowError
+from arbeitnow_sdk.core.result import ArbeitnowResult
+from arbeitnow_sdk.core.response import ArbeitnowResponse
+from arbeitnow_sdk.core.spec import ArbeitnowSpec
+from arbeitnow_sdk.feature.base_feature import ArbeitnowBaseFeature
 
 
 def _client():

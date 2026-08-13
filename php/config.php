@@ -53,7 +53,7 @@ class ArbeitnowConfig
             ],
             [
               'active' => true,
-              'name' => 'job_type',
+              'name' => 'job_types',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 3,
@@ -81,7 +81,7 @@ class ArbeitnowConfig
             ],
             [
               'active' => true,
-              'name' => 'tag',
+              'name' => 'tags',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 7,
@@ -138,6 +138,7 @@ class ArbeitnowConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/job-board-api',
                   'parts' => [

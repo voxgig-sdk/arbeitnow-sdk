@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'Arbeitnow',
   }
 
 
@@ -77,7 +77,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "job_type",
+          "name": "job_types",
           "req": false,
           "type": "`$ARRAY`",
           "index$": 3
@@ -105,7 +105,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "tag",
+          "name": "tags",
           "req": false,
           "type": "`$ARRAY`",
           "index$": 7
@@ -162,6 +162,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/job-board-api",
               "parts": [

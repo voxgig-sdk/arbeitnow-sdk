@@ -21,7 +21,7 @@ main: kit: entity: job: {
       type: "`$STRING`"
     }
     {
-      name: "job_type"
+      name: "job_types"
       req: false
       type: "`$ARRAY`"
     }
@@ -41,7 +41,7 @@ main: kit: entity: job: {
       type: "`$STRING`"
     }
     {
-      name: "tag"
+      name: "tags"
       req: false
       type: "`$ARRAY`"
     }

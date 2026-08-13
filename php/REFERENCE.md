@@ -95,11 +95,11 @@ $job = $client->Job();
 | `company_name` | `string` | No |  |
 | `created_at` | `int` | No |  |
 | `description` | `string` | No |  |
-| `job_type` | `array` | No |  |
+| `job_types` | `array` | No |  |
 | `location` | `string` | No |  |
 | `remote` | `bool` | No |  |
 | `slug` | `string` | No |  |
-| `tag` | `array` | No |  |
+| `tags` | `array` | No |  |
 | `title` | `string` | No |  |
 | `url` | `string` | No |  |
 

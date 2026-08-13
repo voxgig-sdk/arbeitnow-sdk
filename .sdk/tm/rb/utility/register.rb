@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ ArbeitnowUtility.registrar = ->(u) {
   u.prepare_params = ArbeitnowUtilities::PrepareParams
   u.prepare_path = ArbeitnowUtilities::PreparePath
   u.prepare_query = ArbeitnowUtilities::PrepareQuery
+  u.graphql_body = ArbeitnowUtilities::GraphqlBody
+  u.graphql_errors = ArbeitnowUtilities::GraphqlErrors
   u.result_basic = ArbeitnowUtilities::ResultBasic
   u.result_body = ArbeitnowUtilities::ResultBody
   u.result_headers = ArbeitnowUtilities::ResultHeaders
