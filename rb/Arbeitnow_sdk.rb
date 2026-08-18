@@ -28,7 +28,7 @@ class ArbeitnowSDK
     utility = ArbeitnowUtility.new
     @_utility = utility
 
-    config = ArbeitnowConfig.make_config
+    config = ArbeitnowConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

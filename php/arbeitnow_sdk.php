@@ -40,7 +40,7 @@ class ArbeitnowSDK
         $utility = new ArbeitnowUtility();
         $this->_utility = $utility;
 
-        $config = ArbeitnowConfig::make_config();
+        $config = ArbeitnowConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

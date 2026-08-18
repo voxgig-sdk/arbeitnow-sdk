@@ -40,7 +40,7 @@ class JobEntityTest extends TestCase
         $this->assertCount(3, $seen);
 
         // Inbound: streaming active -> yields each item from the feature.
-        $cfg = ArbeitnowConfig::make_config();
+        $cfg = ArbeitnowConfig::shared_config();
         if (isset($cfg["feature"]) && is_array($cfg["feature"]) && isset($cfg["feature"]["streaming"])) {
             $sdk = ArbeitnowSDK::test($seed, ["feature" => ["streaming" => ["active" => true]]]);
             $got = [];
