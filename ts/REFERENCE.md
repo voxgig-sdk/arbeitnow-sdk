@@ -116,16 +116,16 @@ const job = client.Job()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | `string` | No |  |
-| `created_at` | `number` | No |  |
-| `description` | `string` | No |  |
-| `job_types` | `any[]` | No |  |
-| `location` | `string` | No |  |
-| `remote` | `boolean` | No |  |
-| `slug` | `string` | No |  |
-| `tags` | `any[]` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `company_name` | `string` | No | Name of the hiring company |
+| `created_at` | `number` | No | Timestamp when the job was created |
+| `description` | `string` | No | Detailed job description |
+| `job_types` | `any[]` | No | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | No | Job location |
+| `remote` | `boolean` | No | Whether the job offers remote work |
+| `slug` | `string` | No | Unique identifier for the job posting |
+| `tags` | `any[]` | No | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | No | Job title |
+| `url` | `string` | No | URL to the job posting |
 
 ### Operations
 

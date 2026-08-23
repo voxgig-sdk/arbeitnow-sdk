@@ -87,16 +87,16 @@ job = client.Job()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | `str` | No |  |
-| `created_at` | `int` | No |  |
-| `description` | `str` | No |  |
-| `job_types` | `list` | No |  |
-| `location` | `str` | No |  |
-| `remote` | `bool` | No |  |
-| `slug` | `str` | No |  |
-| `tags` | `list` | No |  |
-| `title` | `str` | No |  |
-| `url` | `str` | No |  |
+| `company_name` | `str` | No | Name of the hiring company |
+| `created_at` | `int` | No | Timestamp when the job was created |
+| `description` | `str` | No | Detailed job description |
+| `job_types` | `list` | No | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `str` | No | Job location |
+| `remote` | `bool` | No | Whether the job offers remote work |
+| `slug` | `str` | No | Unique identifier for the job posting |
+| `tags` | `list` | No | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `str` | No | Job title |
+| `url` | `str` | No | URL to the job posting |
 
 ### Operations
 

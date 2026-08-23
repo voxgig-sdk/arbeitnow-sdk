@@ -19,9 +19,20 @@ class Config {
     return fi
   }
 
+  // False for a feature added at runtime via options.extend (station's
+  // adopt path) - the constructor uses this to skip makeFeature for names
+  // no generated class backs.
+  hasFeature(this: any, fn: string) {
+    return null != FEATURE_CLASS[fn]
+  }
+
 
   main = {
     name: 'Arbeitnow',
+        slug: "arbeitnow",
+    version: "0.0.1",
+    target: "ts",
+
   }
 
 
@@ -56,42 +67,52 @@ class Config {
       "fields": [
         {
           "name": "company_name",
+          "short": "Name of the hiring company",
           "type": "`$STRING`"
         },
         {
           "name": "created_at",
+          "short": "Timestamp when the job was created",
           "type": "`$INTEGER`"
         },
         {
           "name": "description",
+          "short": "Detailed job description",
           "type": "`$STRING`"
         },
         {
           "name": "job_types",
+          "short": "Type of employment (e.g., full-time, part-time, contract)",
           "type": "`$ARRAY`"
         },
         {
           "name": "location",
+          "short": "Job location",
           "type": "`$STRING`"
         },
         {
           "name": "remote",
+          "short": "Whether the job offers remote work",
           "type": "`$BOOLEAN`"
         },
         {
           "name": "slug",
+          "short": "Unique identifier for the job posting",
           "type": "`$STRING`"
         },
         {
           "name": "tags",
+          "short": "Tags associated with the job (e.g., technologies, skills)",
           "type": "`$ARRAY`"
         },
         {
           "name": "title",
+          "short": "Job title",
           "type": "`$STRING`"
         },
         {
           "name": "url",
+          "short": "URL to the job posting",
           "type": "`$STRING`"
         }
       ],

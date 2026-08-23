@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -287,16 +287,16 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `company_name` |  |
-| `created_at` |  |
-| `description` |  |
-| `job_types` |  |
-| `location` |  |
-| `remote` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
-| `url` |  |
+| `company_name` | Name of the hiring company |
+| `created_at` | Timestamp when the job was created |
+| `description` | Detailed job description |
+| `job_types` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | Job location |
+| `remote` | Whether the job offers remote work |
+| `slug` | Unique identifier for the job posting |
+| `tags` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | Job title |
+| `url` | URL to the job posting |
 
 Operations: list.
 
@@ -321,16 +321,16 @@ Create an instance: `const job = client.Job()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `company_name` | `string` |  |
-| `created_at` | `number` |  |
-| `description` | `string` |  |
-| `job_types` | `any[]` |  |
-| `location` | `string` |  |
-| `remote` | `boolean` |  |
-| `slug` | `string` |  |
-| `tags` | `any[]` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `company_name` | `string` | Name of the hiring company |
+| `created_at` | `number` | Timestamp when the job was created |
+| `description` | `string` | Detailed job description |
+| `job_types` | `any[]` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | Job location |
+| `remote` | `boolean` | Whether the job offers remote work |
+| `slug` | `string` | Unique identifier for the job posting |
+| `tags` | `any[]` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | Job title |
+| `url` | `string` | URL to the job posting |
 
 #### Example: List
 

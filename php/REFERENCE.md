@@ -92,16 +92,16 @@ $job = $client->Job();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | `string` | No |  |
-| `created_at` | `int` | No |  |
-| `description` | `string` | No |  |
-| `job_types` | `array` | No |  |
-| `location` | `string` | No |  |
-| `remote` | `bool` | No |  |
-| `slug` | `string` | No |  |
-| `tags` | `array` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `company_name` | `string` | No | Name of the hiring company |
+| `created_at` | `int` | No | Timestamp when the job was created |
+| `description` | `string` | No | Detailed job description |
+| `job_types` | `array` | No | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | No | Job location |
+| `remote` | `bool` | No | Whether the job offers remote work |
+| `slug` | `string` | No | Unique identifier for the job posting |
+| `tags` | `array` | No | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | No | Job title |
+| `url` | `string` | No | URL to the job posting |
 
 ### Operations
 

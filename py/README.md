@@ -243,16 +243,16 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `company_name` |  |
-| `created_at` |  |
-| `description` |  |
-| `job_types` |  |
-| `location` |  |
-| `remote` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
-| `url` |  |
+| `company_name` | Name of the hiring company |
+| `created_at` | Timestamp when the job was created |
+| `description` | Detailed job description |
+| `job_types` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | Job location |
+| `remote` | Whether the job offers remote work |
+| `slug` | Unique identifier for the job posting |
+| `tags` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | Job title |
+| `url` | URL to the job posting |
 
 Operations: List.
 
@@ -277,16 +277,16 @@ Create an instance: `job = client.Job()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `company_name` | `str` |  |
-| `created_at` | `int` |  |
-| `description` | `str` |  |
-| `job_types` | `list` |  |
-| `location` | `str` |  |
-| `remote` | `bool` |  |
-| `slug` | `str` |  |
-| `tags` | `list` |  |
-| `title` | `str` |  |
-| `url` | `str` |  |
+| `company_name` | `str` | Name of the hiring company |
+| `created_at` | `int` | Timestamp when the job was created |
+| `description` | `str` | Detailed job description |
+| `job_types` | `list` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `str` | Job location |
+| `remote` | `bool` | Whether the job offers remote work |
+| `slug` | `str` | Unique identifier for the job posting |
+| `tags` | `list` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `str` | Job title |
+| `url` | `str` | URL to the job posting |
 
 #### Example: List
 

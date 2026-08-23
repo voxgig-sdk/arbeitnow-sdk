@@ -90,16 +90,16 @@ local job = client:Job(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `company_name` | `string` | No |  |
-| `created_at` | `number` | No |  |
-| `description` | `string` | No |  |
-| `job_types` | `table` | No |  |
-| `location` | `string` | No |  |
-| `remote` | `boolean` | No |  |
-| `slug` | `string` | No |  |
-| `tags` | `table` | No |  |
-| `title` | `string` | No |  |
-| `url` | `string` | No |  |
+| `company_name` | `string` | No | Name of the hiring company |
+| `created_at` | `number` | No | Timestamp when the job was created |
+| `description` | `string` | No | Detailed job description |
+| `job_types` | `table` | No | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | No | Job location |
+| `remote` | `boolean` | No | Whether the job offers remote work |
+| `slug` | `string` | No | Unique identifier for the job posting |
+| `tags` | `table` | No | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | No | Job title |
+| `url` | `string` | No | URL to the job posting |
 
 ### Operations
 

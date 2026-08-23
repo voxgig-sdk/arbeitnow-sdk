@@ -237,16 +237,16 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `company_name` |  |
-| `created_at` |  |
-| `description` |  |
-| `job_types` |  |
-| `location` |  |
-| `remote` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
-| `url` |  |
+| `company_name` | Name of the hiring company |
+| `created_at` | Timestamp when the job was created |
+| `description` | Detailed job description |
+| `job_types` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | Job location |
+| `remote` | Whether the job offers remote work |
+| `slug` | Unique identifier for the job posting |
+| `tags` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | Job title |
+| `url` | URL to the job posting |
 
 Operations: List.
 
@@ -271,16 +271,16 @@ Create an instance: `job = client.Job`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `company_name` | `String` |  |
-| `created_at` | `Integer` |  |
-| `description` | `String` |  |
-| `job_types` | `Array` |  |
-| `location` | `String` |  |
-| `remote` | `Boolean` |  |
-| `slug` | `String` |  |
-| `tags` | `Array` |  |
-| `title` | `String` |  |
-| `url` | `String` |  |
+| `company_name` | `String` | Name of the hiring company |
+| `created_at` | `Integer` | Timestamp when the job was created |
+| `description` | `String` | Detailed job description |
+| `job_types` | `Array` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `String` | Job location |
+| `remote` | `Boolean` | Whether the job offers remote work |
+| `slug` | `String` | Unique identifier for the job posting |
+| `tags` | `Array` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `String` | Job title |
+| `url` | `String` | URL to the job posting |
 
 #### Example: List
 

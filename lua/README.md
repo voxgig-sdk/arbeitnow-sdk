@@ -231,16 +231,16 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `company_name` |  |
-| `created_at` |  |
-| `description` |  |
-| `job_types` |  |
-| `location` |  |
-| `remote` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
-| `url` |  |
+| `company_name` | Name of the hiring company |
+| `created_at` | Timestamp when the job was created |
+| `description` | Detailed job description |
+| `job_types` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | Job location |
+| `remote` | Whether the job offers remote work |
+| `slug` | Unique identifier for the job posting |
+| `tags` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | Job title |
+| `url` | URL to the job posting |
 
 Operations: List.
 
@@ -265,16 +265,16 @@ Create an instance: `local job = client:Job(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `company_name` | `string` |  |
-| `created_at` | `number` |  |
-| `description` | `string` |  |
-| `job_types` | `table` |  |
-| `location` | `string` |  |
-| `remote` | `boolean` |  |
-| `slug` | `string` |  |
-| `tags` | `table` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `company_name` | `string` | Name of the hiring company |
+| `created_at` | `number` | Timestamp when the job was created |
+| `description` | `string` | Detailed job description |
+| `job_types` | `table` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | Job location |
+| `remote` | `boolean` | Whether the job offers remote work |
+| `slug` | `string` | Unique identifier for the job posting |
+| `tags` | `table` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | Job title |
+| `url` | `string` | URL to the job posting |
 
 #### Example: List
 

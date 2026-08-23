@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "Arbeitnow",
+			"slug": "arbeitnow",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -33,42 +36,52 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "company_name",
+						"short": "Name of the hiring company",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "created_at",
+						"short": "Timestamp when the job was created",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "description",
+						"short": "Detailed job description",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "job_types",
+						"short": "Type of employment (e.g., full-time, part-time, contract)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "location",
+						"short": "Job location",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "remote",
+						"short": "Whether the job offers remote work",
 						"type": "`$BOOLEAN`",
 					},
 					map[string]any{
 						"name": "slug",
+						"short": "Unique identifier for the job posting",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "tags",
+						"short": "Tags associated with the job (e.g., technologies, skills)",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "title",
+						"short": "Job title",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "url",
+						"short": "URL to the job posting",
 						"type": "`$STRING`",
 					},
 				},

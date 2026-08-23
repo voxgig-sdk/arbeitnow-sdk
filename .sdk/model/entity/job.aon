@@ -8,51 +8,61 @@ main: kit: entity: job: {
     {
       name: "company_name"
       req: false
+      short: "Name of the hiring company"
       type: "`$STRING`"
     }
     {
       name: "created_at"
       req: false
+      short: "Timestamp when the job was created"
       type: "`$INTEGER`"
     }
     {
       name: "description"
       req: false
+      short: "Detailed job description"
       type: "`$STRING`"
     }
     {
       name: "job_types"
       req: false
+      short: "Type of employment (e.g., full-time, part-time, contract)"
       type: "`$ARRAY`"
     }
     {
       name: "location"
       req: false
+      short: "Job location"
       type: "`$STRING`"
     }
     {
       name: "remote"
       req: false
+      short: "Whether the job offers remote work"
       type: "`$BOOLEAN`"
     }
     {
       name: "slug"
       req: false
+      short: "Unique identifier for the job posting"
       type: "`$STRING`"
     }
     {
       name: "tags"
       req: false
+      short: "Tags associated with the job (e.g., technologies, skills)"
       type: "`$ARRAY`"
     }
     {
       name: "title"
       req: false
+      short: "Job title"
       type: "`$STRING`"
     }
     {
       name: "url"
       req: false
+      short: "URL to the job posting"
       type: "`$STRING`"
     }
   ]

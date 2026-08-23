@@ -247,16 +247,16 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `company_name` |  |
-| `created_at` |  |
-| `description` |  |
-| `job_types` |  |
-| `location` |  |
-| `remote` |  |
-| `slug` |  |
-| `tags` |  |
-| `title` |  |
-| `url` |  |
+| `company_name` | Name of the hiring company |
+| `created_at` | Timestamp when the job was created |
+| `description` | Detailed job description |
+| `job_types` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | Job location |
+| `remote` | Whether the job offers remote work |
+| `slug` | Unique identifier for the job posting |
+| `tags` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | Job title |
+| `url` | URL to the job posting |
 
 Operations: List.
 
@@ -281,16 +281,16 @@ Create an instance: `$job = $client->Job();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `company_name` | `string` |  |
-| `created_at` | `int` |  |
-| `description` | `string` |  |
-| `job_types` | `array` |  |
-| `location` | `string` |  |
-| `remote` | `bool` |  |
-| `slug` | `string` |  |
-| `tags` | `array` |  |
-| `title` | `string` |  |
-| `url` | `string` |  |
+| `company_name` | `string` | Name of the hiring company |
+| `created_at` | `int` | Timestamp when the job was created |
+| `description` | `string` | Detailed job description |
+| `job_types` | `array` | Type of employment (e.g., full-time, part-time, contract) |
+| `location` | `string` | Job location |
+| `remote` | `bool` | Whether the job offers remote work |
+| `slug` | `string` | Unique identifier for the job posting |
+| `tags` | `array` | Tags associated with the job (e.g., technologies, skills) |
+| `title` | `string` | Job title |
+| `url` | `string` | URL to the job posting |
 
 #### Example: List
 

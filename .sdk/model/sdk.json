@@ -36,60 +36,70 @@
               "active": true,
               "name": "company_name",
               "req": false,
+              "short": "Name of the hiring company",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "created_at",
               "req": false,
+              "short": "Timestamp when the job was created",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "description",
               "req": false,
+              "short": "Detailed job description",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "job_types",
               "req": false,
+              "short": "Type of employment (e.g., full-time, part-time, contract)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "location",
               "req": false,
+              "short": "Job location",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "remote",
               "req": false,
+              "short": "Whether the job offers remote work",
               "type": "`$BOOLEAN`"
             },
             {
               "active": true,
               "name": "slug",
               "req": false,
+              "short": "Unique identifier for the job posting",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "tags",
               "req": false,
+              "short": "Tags associated with the job (e.g., technologies, skills)",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Job title",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "url",
               "req": false,
+              "short": "URL to the job posting",
               "type": "`$STRING`"
             }
           ],
