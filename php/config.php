@@ -42,6 +42,7 @@ class ArbeitnowConfig
           'options' => [
             'active' => false,
           ],
+          'transport' => 'base',
         ],
             ],
             "options" => [
