@@ -55,46 +55,18 @@ Job = Struct.new(
 
 # Request payload for Job#list.
 #
-# @!attribute [rw] company_name
-#   @return [String, nil]
-#
-# @!attribute [rw] created_at
-#   @return [Integer, nil]
-#
-# @!attribute [rw] description
-#   @return [String, nil]
-#
-# @!attribute [rw] job_types
-#   @return [Array, nil]
-#
 # @!attribute [rw] location
 #   @return [String, nil]
 #
-# @!attribute [rw] remote
-#   @return [Boolean, nil]
+# @!attribute [rw] page
+#   @return [Integer, nil]
 #
-# @!attribute [rw] slug
-#   @return [String, nil]
-#
-# @!attribute [rw] tags
-#   @return [Array, nil]
-#
-# @!attribute [rw] title
-#   @return [String, nil]
-#
-# @!attribute [rw] url
+# @!attribute [rw] search
 #   @return [String, nil]
 JobListMatch = Struct.new(
-  :company_name,
-  :created_at,
-  :description,
-  :job_types,
   :location,
-  :remote,
-  :slug,
-  :tags,
-  :title,
-  :url,
+  :page,
+  :search,
   keyword_init: true
 )
 

@@ -19,16 +19,9 @@
 ---@field url? string
 
 ---@class JobListMatch
----@field company_name? string
----@field created_at? number
----@field description? string
----@field job_types? table
 ---@field location? string
----@field remote? boolean
----@field slug? string
----@field tags? table
----@field title? string
----@field url? string
+---@field page? number
+---@field search? string
 
 local M = {}
 

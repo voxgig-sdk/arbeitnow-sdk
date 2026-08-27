@@ -30,13 +30,6 @@ class Job(TypedDict, total=False):
 
 
 class JobListMatch(TypedDict, total=False):
-    company_name: str
-    created_at: int
-    description: str
-    job_types: list
     location: str
-    remote: bool
-    slug: str
-    tags: list
-    title: str
-    url: str
+    page: int
+    search: str

@@ -19,15 +19,8 @@ export interface Job {
 }
 
 export interface JobListMatch {
-  company_name?: string
-  created_at?: number
-  description?: string
-  job_types?: any[]
   location?: string
-  remote?: boolean
-  slug?: string
-  tags?: any[]
-  title?: string
-  url?: string
+  page?: number
+  search?: string
 }
 

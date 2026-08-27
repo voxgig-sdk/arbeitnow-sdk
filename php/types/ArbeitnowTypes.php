@@ -30,15 +30,8 @@ class Job
 /** Request payload for Job#list. */
 class JobListMatch
 {
-    public ?string $company_name = null;
-    public ?int $created_at = null;
-    public ?string $description = null;
-    public ?array $job_types = null;
     public ?string $location = null;
-    public ?bool $remote = null;
-    public ?string $slug = null;
-    public ?array $tags = null;
-    public ?string $title = null;
-    public ?string $url = null;
+    public ?int $page = null;
+    public ?string $search = null;
 }
 

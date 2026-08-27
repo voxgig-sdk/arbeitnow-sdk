@@ -28,16 +28,9 @@ type Job struct {
 
 // JobListMatch is the typed request payload for Job.ListTyped.
 type JobListMatch struct {
-	CompanyName *string `json:"company_name,omitempty"`
-	CreatedAt *int `json:"created_at,omitempty"`
-	Description *string `json:"description,omitempty"`
-	JobTypes *[]any `json:"job_types,omitempty"`
 	Location *string `json:"location,omitempty"`
-	Remote *bool `json:"remote,omitempty"`
-	Slug *string `json:"slug,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Title *string `json:"title,omitempty"`
-	Url *string `json:"url,omitempty"`
+	Page *int `json:"page,omitempty"`
+	Search *string `json:"search,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the
