@@ -77,6 +77,7 @@ local function make_config()
             ["type"] = "`$STRING`",
           },
           {
+            ["format"] = "uri",
             ["name"] = "url",
             ["short"] = "URL to the job posting",
             ["type"] = "`$STRING`",
@@ -115,8 +116,10 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/job-board-api",
-                ["parts"] = {
-                  "job-board-api",
+                ["segments"] = {
+                  {
+                    ["lit"] = "job-board-api",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -128,6 +131,9 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "job-board-api",
                 },
               },
             },

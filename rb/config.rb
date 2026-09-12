@@ -89,6 +89,7 @@ module ArbeitnowConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "uri",
               "name" => "url",
               "short" => "URL to the job posting",
               "type" => "`$STRING`",
@@ -127,8 +128,10 @@ module ArbeitnowConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/job-board-api",
-                  "parts" => [
-                    "job-board-api",
+                  "segments" => [
+                    {
+                      "lit" => "job-board-api",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -141,6 +144,9 @@ module ArbeitnowConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "job-board-api",
+                  ],
                 },
               ],
             },

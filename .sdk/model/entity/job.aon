@@ -60,6 +60,7 @@ main: kit: entity: job: {
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "url"
       req: false
       short: "URL to the job posting"
@@ -101,8 +102,10 @@ main: kit: entity: job: {
           }
           method: "GET"
           orig: "/job-board-api"
-          parts: [
-            "job-board-api"
+          segments: [
+            {
+              lit: "job-board-api"
+            }
           ]
           select: {
             exist: [

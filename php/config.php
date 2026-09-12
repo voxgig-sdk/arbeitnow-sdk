@@ -103,6 +103,7 @@ class ArbeitnowConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'url',
               'short' => 'URL to the job posting',
               'type' => '`$STRING`',
@@ -141,8 +142,10 @@ class ArbeitnowConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/job-board-api',
-                  'parts' => [
-                    'job-board-api',
+                  'segments' => [
+                    [
+                      'lit' => 'job-board-api',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -154,6 +157,9 @@ class ArbeitnowConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'job-board-api',
                   ],
                 ],
               ],
