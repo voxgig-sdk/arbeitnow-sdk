@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow'
+import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow-sdk'
 
 const client = new ArbeitnowSDK()
 ```
@@ -421,7 +421,7 @@ arbeitnow/
 Import the SDK from the package root:
 
 ```ts
-import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow'
+import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow-sdk'
 ```
 
 ### Entity state

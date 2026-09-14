@@ -105,7 +105,7 @@ local results, err = client:Job():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
+| TypeScript | `@voxgig-sdk/arbeitnow-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
 | Python | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
 | PHP | `voxgig-sdk/arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/arbeitnow-sdk/go` | `go get github.com/voxgig-sdk/arbeitnow-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Job():list()
 ### TypeScript
 
 ```ts
-import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow'
+import { ArbeitnowSDK } from '@voxgig-sdk/arbeitnow-sdk'
 
 const client = new ArbeitnowSDK()
 
