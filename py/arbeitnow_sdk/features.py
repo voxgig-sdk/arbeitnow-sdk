@@ -1,12 +1,18 @@
 # Arbeitnow SDK feature factory
 
 from arbeitnow_sdk.feature.base_feature import ArbeitnowBaseFeature
+from arbeitnow_sdk.feature.ratelimit_feature import ArbeitnowRatelimitFeature
+from arbeitnow_sdk.feature.retry_feature import ArbeitnowRetryFeature
 from arbeitnow_sdk.feature.test_feature import ArbeitnowTestFeature
+from arbeitnow_sdk.feature.timeout_feature import ArbeitnowTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: ArbeitnowBaseFeature(),
+    "ratelimit": lambda: ArbeitnowRatelimitFeature(),
+    "retry": lambda: ArbeitnowRetryFeature(),
     "test": lambda: ArbeitnowTestFeature(),
+    "timeout": lambda: ArbeitnowTimeoutFeature(),
 }
 
 

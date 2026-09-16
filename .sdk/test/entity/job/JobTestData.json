@@ -3,7 +3,7 @@
     "job": {
       "JOB00": {
         "company_name": "s64",
-        "created_at": "s65",
+        "created_at": 101,
         "description": "s66",
         "job_types": [],
         "location": "s68",
@@ -15,7 +15,7 @@
       },
       "JOB01": {
         "company_name": "sc8",
-        "created_at": "sc9",
+        "created_at": 201,
         "description": "sca",
         "job_types": [],
         "location": "scc",
@@ -27,7 +27,7 @@
       },
       "JOB02": {
         "company_name": "s12c",
-        "created_at": "s12d",
+        "created_at": 301,
         "description": "s12e",
         "job_types": [],
         "location": "s130",
@@ -43,7 +43,7 @@
     "job": {
       "job_ref01": {
         "company_name": "s190",
-        "created_at": "s191",
+        "created_at": 401,
         "description": "s192",
         "job_types": [],
         "location": "s194",
@@ -52,6 +52,208 @@
         "tags": [],
         "title": "s198",
         "url": "s199"
+      }
+    }
+  },
+  "requests": {
+    "GET /job-board-api": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getJobListings",
+        "parameters": [
+          {
+            "description": "Search term to filter jobs by title, company name, or description",
+            "in": "query",
+            "name": "search",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Filter jobs by location",
+            "in": "query",
+            "name": "location",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Page number for pagination",
+            "in": "query",
+            "name": "page",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "minimum": 1,
+              "type": "integer"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "data": {
+                      "items": {
+                        "properties": {
+                          "company_name": {
+                            "description": "Name of the hiring company",
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "description": "Timestamp when the job was created",
+                            "type": "integer"
+                          },
+                          "description": {
+                            "description": "Detailed job description",
+                            "type": "string"
+                          },
+                          "job_types": {
+                            "description": "Type of employment (e.g., full-time, part-time, contract)",
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "location": {
+                            "description": "Job location",
+                            "type": "string"
+                          },
+                          "remote": {
+                            "description": "Whether the job offers remote work",
+                            "type": "boolean"
+                          },
+                          "slug": {
+                            "description": "Unique identifier for the job posting",
+                            "type": "string"
+                          },
+                          "tags": {
+                            "description": "Tags associated with the job (e.g., technologies, skills)",
+                            "items": {
+                              "type": "string"
+                            },
+                            "type": "array"
+                          },
+                          "title": {
+                            "description": "Job title",
+                            "type": "string"
+                          },
+                          "url": {
+                            "description": "URL to the job posting",
+                            "format": "uri",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    "links": {
+                      "properties": {
+                        "first": {
+                          "description": "Link to the first page",
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        "last": {
+                          "description": "Link to the last page",
+                          "format": "uri",
+                          "type": "string"
+                        },
+                        "next": {
+                          "description": "Link to the next page",
+                          "format": "uri",
+                          "nullable": true,
+                          "type": "string"
+                        },
+                        "prev": {
+                          "description": "Link to the previous page",
+                          "format": "uri",
+                          "nullable": true,
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "meta": {
+                      "properties": {
+                        "current_page": {
+                          "description": "Current page number",
+                          "type": "integer"
+                        },
+                        "from": {
+                          "description": "Starting item number on current page",
+                          "type": "integer"
+                        },
+                        "last_page": {
+                          "description": "Total number of pages",
+                          "type": "integer"
+                        },
+                        "path": {
+                          "description": "Base path of the API endpoint",
+                          "type": "string"
+                        },
+                        "per_page": {
+                          "description": "Number of items per page",
+                          "type": "integer"
+                        },
+                        "to": {
+                          "description": "Ending item number on current page",
+                          "type": "integer"
+                        },
+                        "total": {
+                          "description": "Total number of items",
+                          "type": "integer"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with job listings"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request - Invalid parameters"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "description": "Error message",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }
