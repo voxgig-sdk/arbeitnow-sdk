@@ -105,12 +105,12 @@ local results, err = client:Job():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/arbeitnow-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
-| Python | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
-| PHP | `voxgig-sdk/arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
+| TypeScript | `@voxgig-sdk/arbeitnow-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/tags) |
+| Python | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/tags) |
+| PHP | `voxgig-sdk/arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/arbeitnow-sdk/go` | `go get github.com/voxgig-sdk/arbeitnow-sdk/go@latest` |
-| Ruby | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
-| Lua | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/releases) |
+| Ruby | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/tags) |
+| Lua | `voxgig-sdk-arbeitnow` | publish pending — [install from git tag](https://github.com/voxgig-sdk/arbeitnow-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/arbeitnow-sdk/go-cli` | `go install github.com/voxgig-sdk/arbeitnow-sdk/go-cli/cmd/arbeitnow@latest` |
 | Go MCP server | `github.com/voxgig-sdk/arbeitnow-sdk/go-mcp` | `go get github.com/voxgig-sdk/arbeitnow-sdk/go-mcp@latest` |
 
