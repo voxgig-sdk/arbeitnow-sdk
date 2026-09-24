@@ -1,0 +1,22 @@
+# BasicJobFlow
+
+main: kit: flow: BasicJobFlow:
+{
+  entity: "job",
+  kind: "basic",
+  name: "BasicJobFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "job_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicJobFlow"
+}

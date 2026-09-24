@@ -16,12 +16,6 @@ const FEATURE_CLASS: Record<string, typeof BaseFeature> = {
 }
 
 
-// Per-feature plugin DEFINITIONS (voxgig/plugin `Definition` values), from
-// the model's active plugin groups. A feature that takes a `plugins` option
-// (secrets over sekreto) reads its own entry; a feature with no plugins has
-// none. Named imports above make each definition statically reachable, so
-// an SDK carries exactly the plugin modules its model selects — the same
-// leanness the old side-effect registry imports bought, without a registry.
 const FEATURE_PLUGINS: Record<string, any[]> = {
   
 }
@@ -32,7 +26,6 @@ class Config {
   makeFeature(this: any, fn: string) {
     const fc = FEATURE_CLASS[fn]
     const fi = new fc()
-    // TODO: errors etc
     return fi
   }
 
@@ -139,54 +132,64 @@ class Config {
       "fields": [
         {
           "name": "company_name",
-          "short": "Name of the hiring company",
-          "type": "`$STRING`"
+          "title": "Company Name",
+          "type": "`$STRING`",
+          "short": "Name of the hiring company"
         },
         {
           "name": "created_at",
-          "short": "Timestamp when the job was created",
-          "type": "`$INTEGER`"
+          "title": "Created At",
+          "type": "`$INTEGER`",
+          "short": "Timestamp when the job was created"
         },
         {
           "name": "description",
-          "short": "Detailed job description",
-          "type": "`$STRING`"
+          "title": "Description",
+          "type": "`$STRING`",
+          "short": "Detailed job description"
         },
         {
           "name": "job_types",
-          "short": "Type of employment (e.g., full-time, part-time, contract)",
-          "type": "`$ARRAY`"
+          "title": "Job Types",
+          "type": "`$ARRAY`",
+          "short": "Type of employment (e.g., full-time, part-time, contract)"
         },
         {
           "name": "location",
-          "short": "Job location",
-          "type": "`$STRING`"
+          "title": "Location",
+          "type": "`$STRING`",
+          "short": "Job location"
         },
         {
           "name": "remote",
-          "short": "Whether the job offers remote work",
-          "type": "`$BOOLEAN`"
+          "title": "Remote",
+          "type": "`$BOOLEAN`",
+          "short": "Whether the job offers remote work"
         },
         {
           "name": "slug",
-          "short": "Unique identifier for the job posting",
-          "type": "`$STRING`"
+          "title": "Slug",
+          "type": "`$STRING`",
+          "short": "Unique identifier for the job posting"
         },
         {
           "name": "tags",
-          "short": "Tags associated with the job (e.g., technologies, skills)",
-          "type": "`$ARRAY`"
+          "title": "Tags",
+          "type": "`$ARRAY`",
+          "short": "Tags associated with the job (e.g., technologies, skills)"
         },
         {
           "name": "title",
-          "short": "Job title",
-          "type": "`$STRING`"
+          "title": "Title",
+          "type": "`$STRING`",
+          "short": "Job title"
         },
         {
-          "format": "uri",
           "name": "url",
+          "title": "Url",
+          "type": "`$STRING`",
           "short": "URL to the job posting",
-          "type": "`$STRING`"
+          "format": "uri"
         }
       ],
       "name": "job",
@@ -196,29 +199,6 @@ class Config {
           "name": "list",
           "points": [
             {
-              "args": {
-                "query": [
-                  {
-                    "kind": "query",
-                    "name": "location",
-                    "orig": "location",
-                    "type": "`$STRING`"
-                  },
-                  {
-                    "example": 1,
-                    "kind": "query",
-                    "name": "page",
-                    "orig": "page",
-                    "type": "`$INTEGER`"
-                  },
-                  {
-                    "kind": "query",
-                    "name": "search",
-                    "orig": "search",
-                    "type": "`$STRING`"
-                  }
-                ]
-              },
               "kind": "http",
               "method": "GET",
               "orig": "/job-board-api",
@@ -227,20 +207,44 @@ class Config {
                   "lit": "job-board-api"
                 }
               ],
+              "parts": [
+                "job-board-api"
+              ],
+              "rename": {},
+              "transform": {
+                "req": "`reqdata`",
+                "res": "`body`"
+              },
+              "args": {
+                "query": [
+                  {
+                    "name": "location",
+                    "orig": "location",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  },
+                  {
+                    "name": "page",
+                    "orig": "page",
+                    "type": "`$INTEGER`",
+                    "kind": "query",
+                    "example": 1
+                  },
+                  {
+                    "name": "search",
+                    "orig": "search",
+                    "type": "`$STRING`",
+                    "kind": "query"
+                  }
+                ]
+              },
               "select": {
                 "exist": [
                   "location",
                   "page",
                   "search"
                 ]
-              },
-              "transform": {
-                "req": "`reqdata`",
-                "res": "`body`"
-              },
-              "parts": [
-                "job-board-api"
-              ]
+              }
             }
           ]
         }

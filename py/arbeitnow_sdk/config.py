@@ -116,54 +116,64 @@ def make_config():
         "fields": [
           {
             "name": "company_name",
-            "short": "Name of the hiring company",
+            "title": "Company Name",
             "type": "`$STRING`",
+            "short": "Name of the hiring company",
           },
           {
             "name": "created_at",
-            "short": "Timestamp when the job was created",
+            "title": "Created At",
             "type": "`$INTEGER`",
+            "short": "Timestamp when the job was created",
           },
           {
             "name": "description",
-            "short": "Detailed job description",
+            "title": "Description",
             "type": "`$STRING`",
+            "short": "Detailed job description",
           },
           {
             "name": "job_types",
-            "short": "Type of employment (e.g., full-time, part-time, contract)",
+            "title": "Job Types",
             "type": "`$ARRAY`",
+            "short": "Type of employment (e.g., full-time, part-time, contract)",
           },
           {
             "name": "location",
-            "short": "Job location",
+            "title": "Location",
             "type": "`$STRING`",
+            "short": "Job location",
           },
           {
             "name": "remote",
-            "short": "Whether the job offers remote work",
+            "title": "Remote",
             "type": "`$BOOLEAN`",
+            "short": "Whether the job offers remote work",
           },
           {
             "name": "slug",
-            "short": "Unique identifier for the job posting",
+            "title": "Slug",
             "type": "`$STRING`",
+            "short": "Unique identifier for the job posting",
           },
           {
             "name": "tags",
-            "short": "Tags associated with the job (e.g., technologies, skills)",
+            "title": "Tags",
             "type": "`$ARRAY`",
+            "short": "Tags associated with the job (e.g., technologies, skills)",
           },
           {
             "name": "title",
-            "short": "Job title",
+            "title": "Title",
             "type": "`$STRING`",
+            "short": "Job title",
           },
           {
-            "format": "uri",
             "name": "url",
-            "short": "URL to the job posting",
+            "title": "Url",
             "type": "`$STRING`",
+            "short": "URL to the job posting",
+            "format": "uri",
           },
         ],
         "name": "job",
@@ -173,29 +183,6 @@ def make_config():
             "name": "list",
             "points": [
               {
-                "args": {
-                  "query": [
-                    {
-                      "kind": "query",
-                      "name": "location",
-                      "orig": "location",
-                      "type": "`$STRING`",
-                    },
-                    {
-                      "example": 1,
-                      "kind": "query",
-                      "name": "page",
-                      "orig": "page",
-                      "type": "`$INTEGER`",
-                    },
-                    {
-                      "kind": "query",
-                      "name": "search",
-                      "orig": "search",
-                      "type": "`$STRING`",
-                    },
-                  ],
-                },
                 "kind": "http",
                 "method": "GET",
                 "orig": "/job-board-api",
@@ -204,6 +191,37 @@ def make_config():
                     "lit": "job-board-api",
                   },
                 ],
+                "parts": [
+                  "job-board-api",
+                ],
+                "rename": {},
+                "transform": {
+                  "req": "`reqdata`",
+                  "res": "`body`",
+                },
+                "args": {
+                  "query": [
+                    {
+                      "name": "location",
+                      "orig": "location",
+                      "type": "`$STRING`",
+                      "kind": "query",
+                    },
+                    {
+                      "name": "page",
+                      "orig": "page",
+                      "type": "`$INTEGER`",
+                      "kind": "query",
+                      "example": 1,
+                    },
+                    {
+                      "name": "search",
+                      "orig": "search",
+                      "type": "`$STRING`",
+                      "kind": "query",
+                    },
+                  ],
+                },
                 "select": {
                   "exist": [
                     "location",
@@ -211,13 +229,6 @@ def make_config():
                     "search",
                   ],
                 },
-                "transform": {
-                  "req": "`reqdata`",
-                  "res": "`body`",
-                },
-                "parts": [
-                  "job-board-api",
-                ],
               },
             ],
           },

@@ -1,0 +1,143 @@
+# Entity: job
+
+main: kit: entity: job: {
+
+  alias: field: {}
+
+  fields: {
+    company_name: {
+      h: "Company Name"
+      n: "company_name"
+      r: false
+      sh: "Name of the hiring company"
+      t: "`$STRING`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: false
+      sh: "Timestamp when the job was created"
+      t: "`$INTEGER`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      sh: "Detailed job description"
+      t: "`$STRING`"
+    }
+    job_types: {
+      h: "Job Types"
+      n: "job_types"
+      r: false
+      sh: "Type of employment (e.g., full-time, part-time, contract)"
+      t: "`$ARRAY`"
+    }
+    location: {
+      h: "Location"
+      n: "location"
+      r: false
+      sh: "Job location"
+      t: "`$STRING`"
+    }
+    remote: {
+      h: "Remote"
+      n: "remote"
+      r: false
+      sh: "Whether the job offers remote work"
+      t: "`$BOOLEAN`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: false
+      sh: "Unique identifier for the job posting"
+      t: "`$STRING`"
+    }
+    tags: {
+      h: "Tags"
+      n: "tags"
+      r: false
+      sh: "Tags associated with the job (e.g., technologies, skills)"
+      t: "`$ARRAY`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      sh: "Job title"
+      t: "`$STRING`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: false
+      sh: "URL to the job posting"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "job"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /job-board-api"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "location"
+                or: "location"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/job-board-api"
+          q: {
+            exist: [
+              "location"
+              "page"
+              "search"
+            ]
+          }
+          s: [
+            {
+              lit: "job-board-api"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

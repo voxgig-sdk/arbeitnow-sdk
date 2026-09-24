@@ -1,7 +1,7 @@
 // Typed models for the Arbeitnow SDK.
 //
-// GENERATED from the API model: main.kit.entity.<e>.fields[] and per-op
-// params (op.<name>.points[].args.params[]). Field/param types come from the
+// GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+// params (op.<name>.points[].g.params[]). Field/param types come from the
 // canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
@@ -14,16 +14,6 @@ import (
 
 // Job is the typed data model for the job entity.
 type Job struct {
-	CompanyName *string `json:"company_name,omitempty"`
-	CreatedAt *int `json:"created_at,omitempty"`
-	Description *string `json:"description,omitempty"`
-	JobTypes *[]any `json:"job_types,omitempty"`
-	Location *string `json:"location,omitempty"`
-	Remote *bool `json:"remote,omitempty"`
-	Slug *string `json:"slug,omitempty"`
-	Tags *[]any `json:"tags,omitempty"`
-	Title *string `json:"title,omitempty"`
-	Url *string `json:"url,omitempty"`
 }
 
 // JobListMatch is the typed request payload for Job.ListTyped.

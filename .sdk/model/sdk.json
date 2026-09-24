@@ -24,85 +24,161 @@
         "repr": "auto"
       },
       "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
       "entity": {
         "job": {
           "active": true,
           "alias": {
             "field": {}
           },
-          "fields": [
-            {
-              "active": true,
-              "name": "company_name",
-              "req": false,
-              "short": "Name of the hiring company",
-              "type": "`$STRING`"
+          "fields": {
+            "company_name": {
+              "a": true,
+              "h": "Company Name",
+              "n": "company_name",
+              "r": false,
+              "sh": "Name of the hiring company",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "created_at",
-              "req": false,
-              "short": "Timestamp when the job was created",
-              "type": "`$INTEGER`"
+            "created_at": {
+              "a": true,
+              "h": "Created At",
+              "n": "created_at",
+              "r": false,
+              "sh": "Timestamp when the job was created",
+              "t": "`$INTEGER`"
             },
-            {
-              "active": true,
-              "name": "description",
-              "req": false,
-              "short": "Detailed job description",
-              "type": "`$STRING`"
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "sh": "Detailed job description",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "job_types",
-              "req": false,
-              "short": "Type of employment (e.g., full-time, part-time, contract)",
-              "type": "`$ARRAY`"
+            "job_types": {
+              "a": true,
+              "h": "Job Types",
+              "n": "job_types",
+              "r": false,
+              "sh": "Type of employment (e.g., full-time, part-time, contract)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "location",
-              "req": false,
-              "short": "Job location",
-              "type": "`$STRING`"
+            "location": {
+              "a": true,
+              "h": "Location",
+              "n": "location",
+              "r": false,
+              "sh": "Job location",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "remote",
-              "req": false,
-              "short": "Whether the job offers remote work",
-              "type": "`$BOOLEAN`"
+            "remote": {
+              "a": true,
+              "h": "Remote",
+              "n": "remote",
+              "r": false,
+              "sh": "Whether the job offers remote work",
+              "t": "`$BOOLEAN`"
             },
-            {
-              "active": true,
-              "name": "slug",
-              "req": false,
-              "short": "Unique identifier for the job posting",
-              "type": "`$STRING`"
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": false,
+              "sh": "Unique identifier for the job posting",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "name": "tags",
-              "req": false,
-              "short": "Tags associated with the job (e.g., technologies, skills)",
-              "type": "`$ARRAY`"
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "sh": "Tags associated with the job (e.g., technologies, skills)",
+              "t": "`$ARRAY`"
             },
-            {
-              "active": true,
-              "name": "title",
-              "req": false,
-              "short": "Job title",
-              "type": "`$STRING`"
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": false,
+              "sh": "Job title",
+              "t": "`$STRING`"
             },
-            {
-              "active": true,
-              "format": "uri",
-              "name": "url",
-              "req": false,
-              "short": "URL to the job posting",
-              "type": "`$STRING`"
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": false,
+              "sh": "URL to the job posting",
+              "t": "`$STRING`"
             }
-          ],
+          },
           "name": "job",
           "op": {
             "list": {
@@ -110,58 +186,58 @@
               "name": "list",
               "points": [
                 {
-                  "active": true,
-                  "args": {
+                  "a": true,
+                  "co": {
+                    "id": "GET /job-board-api",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
                     "query": [
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "location",
-                        "orig": "location",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "k": "query",
+                        "n": "location",
+                        "or": "location",
+                        "r": false,
+                        "t": "`$STRING`"
                       },
                       {
-                        "active": true,
-                        "example": 1,
-                        "kind": "query",
-                        "name": "page",
-                        "orig": "page",
-                        "reqd": false,
-                        "type": "`$INTEGER`"
+                        "a": true,
+                        "ex": 1,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": "`$INTEGER`"
                       },
                       {
-                        "active": true,
-                        "kind": "query",
-                        "name": "search",
-                        "orig": "search",
-                        "reqd": false,
-                        "type": "`$STRING`"
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
                       }
                     ]
                   },
-                  "contract": {
-                    "id": "GET /job-board-api",
-                    "json": "{\"operationId\":\"getJobListings\",\"parameters\":[{\"description\":\"Search term to filter jobs by title, company name, or description\",\"in\":\"query\",\"name\":\"search\",\"required\":false,\"schema\":{\"type\":\"string\"}},{\"description\":\"Filter jobs by location\",\"in\":\"query\",\"name\":\"location\",\"required\":false,\"schema\":{\"type\":\"string\"}},{\"description\":\"Page number for pagination\",\"in\":\"query\",\"name\":\"page\",\"required\":false,\"schema\":{\"default\":1,\"minimum\":1,\"type\":\"integer\"}}],\"protocol\":\"http\",\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"data\":{\"items\":{\"properties\":{\"company_name\":{\"description\":\"Name of the hiring company\",\"type\":\"string\"},\"created_at\":{\"description\":\"Timestamp when the job was created\",\"type\":\"integer\"},\"description\":{\"description\":\"Detailed job description\",\"type\":\"string\"},\"job_types\":{\"description\":\"Type of employment (e.g., full-time, part-time, contract)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"location\":{\"description\":\"Job location\",\"type\":\"string\"},\"remote\":{\"description\":\"Whether the job offers remote work\",\"type\":\"boolean\"},\"slug\":{\"description\":\"Unique identifier for the job posting\",\"type\":\"string\"},\"tags\":{\"description\":\"Tags associated with the job (e.g., technologies, skills)\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"title\":{\"description\":\"Job title\",\"type\":\"string\"},\"url\":{\"description\":\"URL to the job posting\",\"format\":\"uri\",\"type\":\"string\"}},\"type\":\"object\"},\"type\":\"array\"},\"links\":{\"properties\":{\"first\":{\"description\":\"Link to the first page\",\"format\":\"uri\",\"type\":\"string\"},\"last\":{\"description\":\"Link to the last page\",\"format\":\"uri\",\"type\":\"string\"},\"next\":{\"description\":\"Link to the next page\",\"format\":\"uri\",\"nullable\":true,\"type\":\"string\"},\"prev\":{\"description\":\"Link to the previous page\",\"format\":\"uri\",\"nullable\":true,\"type\":\"string\"}},\"type\":\"object\"},\"meta\":{\"properties\":{\"current_page\":{\"description\":\"Current page number\",\"type\":\"integer\"},\"from\":{\"description\":\"Starting item number on current page\",\"type\":\"integer\"},\"last_page\":{\"description\":\"Total number of pages\",\"type\":\"integer\"},\"path\":{\"description\":\"Base path of the API endpoint\",\"type\":\"string\"},\"per_page\":{\"description\":\"Number of items per page\",\"type\":\"integer\"},\"to\":{\"description\":\"Ending item number on current page\",\"type\":\"integer\"},\"total\":{\"description\":\"Total number of items\",\"type\":\"integer\"}},\"type\":\"object\"}},\"type\":\"object\"}}},\"description\":\"Successful response with job listings\"},\"400\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Bad request - Invalid parameters\"},\"500\":{\"content\":{\"application/json\":{\"schema\":{\"properties\":{\"error\":{\"description\":\"Error message\",\"type\":\"string\"}},\"type\":\"object\"}}},\"description\":\"Internal server error\"}},\"securitySource\":\"unspecified\"}",
-                    "source": "openapi3",
-                    "version": 1
-                  },
-                  "kind": "http",
-                  "method": "GET",
-                  "orig": "/job-board-api",
-                  "segments": [
-                    {
-                      "lit": "job-board-api"
-                    }
-                  ],
-                  "select": {
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/job-board-api",
+                  "q": {
                     "exist": [
                       "location",
                       "page",
                       "search"
                     ]
                   },
-                  "transform": {
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "job-board-api"
+                    }
+                  ],
+                  "t": {
                     "req": "`reqdata`",
                     "res": "`body`"
                   }
@@ -590,13 +666,13 @@
           "param": {},
           "step": [
             {
-              "active": true,
-              "data": {},
-              "input": {},
-              "match": {},
-              "op": "list",
-              "spec": [],
-              "valid": [
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
                 {
                   "apply": "ItemExists",
                   "def": {

@@ -43,7 +43,7 @@ local jobs, err = client:Job():list()
 if err then error(err) end
 
 for _, item in ipairs(jobs) do
-  print(item["company_name"])
+  print(item)
 end
 ```
 

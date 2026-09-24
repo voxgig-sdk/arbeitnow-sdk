@@ -19,7 +19,6 @@ import type {
   JobListMatch,
 } from '../ArbeitnowTypes'
 
-// TODO: needs Entity superclass
 class JobEntity extends ArbeitnowEntityBase<Job> {
 
   constructor(client: ArbeitnowSDK, entopts: any) {

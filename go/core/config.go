@@ -91,54 +91,64 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "company_name",
-						"short": "Name of the hiring company",
+						"title": "Company Name",
 						"type": "`$STRING`",
+						"short": "Name of the hiring company",
 					},
 					map[string]any{
 						"name": "created_at",
-						"short": "Timestamp when the job was created",
+						"title": "Created At",
 						"type": "`$INTEGER`",
+						"short": "Timestamp when the job was created",
 					},
 					map[string]any{
 						"name": "description",
-						"short": "Detailed job description",
+						"title": "Description",
 						"type": "`$STRING`",
+						"short": "Detailed job description",
 					},
 					map[string]any{
 						"name": "job_types",
-						"short": "Type of employment (e.g., full-time, part-time, contract)",
+						"title": "Job Types",
 						"type": "`$ARRAY`",
+						"short": "Type of employment (e.g., full-time, part-time, contract)",
 					},
 					map[string]any{
 						"name": "location",
-						"short": "Job location",
+						"title": "Location",
 						"type": "`$STRING`",
+						"short": "Job location",
 					},
 					map[string]any{
 						"name": "remote",
-						"short": "Whether the job offers remote work",
+						"title": "Remote",
 						"type": "`$BOOLEAN`",
+						"short": "Whether the job offers remote work",
 					},
 					map[string]any{
 						"name": "slug",
-						"short": "Unique identifier for the job posting",
+						"title": "Slug",
 						"type": "`$STRING`",
+						"short": "Unique identifier for the job posting",
 					},
 					map[string]any{
 						"name": "tags",
-						"short": "Tags associated with the job (e.g., technologies, skills)",
+						"title": "Tags",
 						"type": "`$ARRAY`",
+						"short": "Tags associated with the job (e.g., technologies, skills)",
 					},
 					map[string]any{
 						"name": "title",
-						"short": "Job title",
+						"title": "Title",
 						"type": "`$STRING`",
+						"short": "Job title",
 					},
 					map[string]any{
-						"format": "uri",
 						"name": "url",
-						"short": "URL to the job posting",
+						"title": "Url",
 						"type": "`$STRING`",
+						"short": "URL to the job posting",
+						"format": "uri",
 					},
 				},
 				"name": "job",
@@ -148,29 +158,6 @@ func MakeConfig() map[string]any {
 						"name": "list",
 						"points": []any{
 							map[string]any{
-								"args": map[string]any{
-									"query": []any{
-										map[string]any{
-											"kind": "query",
-											"name": "location",
-											"orig": "location",
-											"type": "`$STRING`",
-										},
-										map[string]any{
-											"example": 1,
-											"kind": "query",
-											"name": "page",
-											"orig": "page",
-											"type": "`$INTEGER`",
-										},
-										map[string]any{
-											"kind": "query",
-											"name": "search",
-											"orig": "search",
-											"type": "`$STRING`",
-										},
-									},
-								},
 								"kind": "http",
 								"method": "GET",
 								"orig": "/job-board-api",
@@ -179,19 +166,43 @@ func MakeConfig() map[string]any {
 										"lit": "job-board-api",
 									},
 								},
+								"parts": []any{
+									"job-board-api",
+								},
+								"rename": map[string]any{},
+								"transform": map[string]any{
+									"req": "`reqdata`",
+									"res": "`body`",
+								},
+								"args": map[string]any{
+									"query": []any{
+										map[string]any{
+											"name": "location",
+											"orig": "location",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+										map[string]any{
+											"name": "page",
+											"orig": "page",
+											"type": "`$INTEGER`",
+											"kind": "query",
+											"example": 1,
+										},
+										map[string]any{
+											"name": "search",
+											"orig": "search",
+											"type": "`$STRING`",
+											"kind": "query",
+										},
+									},
+								},
 								"select": map[string]any{
 									"exist": []any{
 										"location",
 										"page",
 										"search",
 									},
-								},
-								"transform": map[string]any{
-									"req": "`reqdata`",
-									"res": "`body`",
-								},
-								"parts": []any{
-									"job-board-api",
 								},
 							},
 						},
