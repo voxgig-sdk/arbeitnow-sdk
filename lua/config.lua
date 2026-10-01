@@ -168,7 +168,7 @@ local function make_config()
                 ["rename"] = {},
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body`",
+                  ["res"] = "`body.data`",
                 },
                 ["args"] = {
                   ["query"] = {

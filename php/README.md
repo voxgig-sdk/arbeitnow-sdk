@@ -12,9 +12,14 @@ The SDK exposes the API as capitalised, semantic **Entities** — for example `$
 
 ## Install
 This package is not yet published to Packagist. Install it from the
-GitHub release tag (`php/vX.Y.Z`):
+GitHub release tag (`php/vX.Y.Z`, see [Releases](https://github.com/voxgig-sdk/arbeitnow-sdk/releases)), or
+from a clone as a Composer path repository:
 
-- Releases: [https://github.com/voxgig-sdk/arbeitnow-sdk/releases](https://github.com/voxgig-sdk/arbeitnow-sdk/releases)
+```bash
+git clone https://github.com/voxgig-sdk/arbeitnow-sdk
+composer config repositories.arbeitnow-sdk path ./arbeitnow-sdk/php
+composer require voxgig-sdk/arbeitnow-sdk:@dev
+```
 
 
 ## Tutorial: your first API call

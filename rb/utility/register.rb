@@ -33,6 +33,8 @@ require_relative 'transform_response'
 
 ArbeitnowUtility.registrar = ->(u) {
   u.clean = ArbeitnowUtilities::Clean
+  u.clean_add = ArbeitnowUtilities::CleanAdd
+  u.clean_explain = ArbeitnowUtilities::CleanExplain
   u.done = ArbeitnowUtilities::Done
   u.make_error = ArbeitnowUtilities::MakeError
   u.feature_add = ArbeitnowUtilities::FeatureAdd

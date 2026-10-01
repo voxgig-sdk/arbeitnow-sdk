@@ -37,6 +37,8 @@ require_once __DIR__ . '/TransformResponse.php';
 
 ArbeitnowUtility::setRegistrar(function (ArbeitnowUtility $u): void {
     $u->clean = [ArbeitnowClean::class, 'call'];
+    $u->clean_add = [ArbeitnowClean::class, 'add'];
+    $u->clean_explain = [ArbeitnowDone::class, 'clean_explain'];
     $u->done = [ArbeitnowDone::class, 'call'];
     $u->make_error = [ArbeitnowMakeError::class, 'call'];
     $u->feature_add = [ArbeitnowFeatureAdd::class, 'call'];

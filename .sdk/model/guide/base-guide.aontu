@@ -11,6 +11,7 @@ guide: {
   entity: job: {
     path: "/job-board-api": {
       op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
     }
   }
 
