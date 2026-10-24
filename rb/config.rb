@@ -79,6 +79,7 @@ module ArbeitnowConfig
           },
           "optspec" => {
             "clearTimer" => "`$FUNCTION`",
+            "now" => "`$FUNCTION`",
             "setTimer" => "`$FUNCTION`",
           },
           "strict" => false,
@@ -189,6 +190,7 @@ module ArbeitnowConfig
                         "orig" => "location",
                         "type" => "`$STRING`",
                         "kind" => "query",
+                        "field" => true,
                       },
                       {
                         "name" => "page",
@@ -205,12 +207,10 @@ module ArbeitnowConfig
                       },
                     ],
                   },
-                  "select" => {
-                    "exist" => [
-                      "location",
-                      "page",
-                      "search",
-                    ],
+                  "select" => {},
+                  "response" => {
+                    "kind" => "json",
+                    "media" => "application/json",
                   },
                 },
               ],

@@ -93,6 +93,7 @@ class ArbeitnowConfig
           ],
           'optspec' => [
             'clearTimer' => '`$FUNCTION`',
+            'now' => '`$FUNCTION`',
             'setTimer' => '`$FUNCTION`',
           ],
           'strict' => false,
@@ -203,6 +204,7 @@ class ArbeitnowConfig
                         'orig' => 'location',
                         'type' => '`$STRING`',
                         'kind' => 'query',
+                        'field' => true,
                       ],
                       [
                         'name' => 'page',
@@ -219,12 +221,10 @@ class ArbeitnowConfig
                       ],
                     ],
                   ],
-                  'select' => [
-                    'exist' => [
-                      'location',
-                      'page',
-                      'search',
-                    ],
+                  'select' => [],
+                  'response' => [
+                    'kind' => 'json',
+                    'media' => 'application/json',
                   ],
                 ],
               ],

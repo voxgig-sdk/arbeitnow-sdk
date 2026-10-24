@@ -17,41 +17,59 @@ const PLAN = [
         "args": [],
         "select": {
             "location": "v1",
-            "page": "v1",
+            "page": 1,
             "search": "v1"
         },
         "headers": [],
+        "cookies": [],
+        "responseMedia": [
+            "application/json"
+        ],
         "query": [
             "search",
             "location",
             "page"
+        ],
+        "queryArgs": [
+            {
+                "name": "location",
+                "wire": "location"
+            },
+            {
+                "name": "page",
+                "wire": "page"
+            },
+            {
+                "name": "search",
+                "wire": "search"
+            }
         ],
         "auth": null,
         "status": 200,
         "sample": {
             "data": [
                 {
+                    "slug": "x",
                     "company_name": "x",
-                    "created_at": 1,
+                    "title": "x",
                     "description": "x",
+                    "remote": true,
+                    "url": "x",
+                    "tags": [
+                        "x"
+                    ],
                     "job_types": [
                         "x"
                     ],
                     "location": "x",
-                    "remote": true,
-                    "slug": "x",
-                    "tags": [
-                        "x"
-                    ],
-                    "title": "x",
-                    "url": "x"
+                    "created_at": 1
                 }
             ],
             "links": {
                 "first": "x",
                 "last": "x",
-                "next": "x",
-                "prev": "x"
+                "prev": "x",
+                "next": "x"
             },
             "meta": {
                 "current_page": 1,

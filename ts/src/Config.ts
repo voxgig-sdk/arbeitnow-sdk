@@ -102,6 +102,7 @@ class Config {
       },
       "optspec": {
         "clearTimer": "`$FUNCTION`",
+        "now": "`$FUNCTION`",
         "setTimer": "`$FUNCTION`"
       },
       "strict": false,
@@ -221,7 +222,8 @@ class Config {
                     "name": "location",
                     "orig": "location",
                     "type": "`$STRING`",
-                    "kind": "query"
+                    "kind": "query",
+                    "field": true
                   },
                   {
                     "name": "page",
@@ -238,12 +240,10 @@ class Config {
                   }
                 ]
               },
-              "select": {
-                "exist": [
-                  "location",
-                  "page",
-                  "search"
-                ]
+              "select": {},
+              "response": {
+                "kind": "json",
+                "media": "application/json"
               }
             }
           ]

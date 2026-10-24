@@ -117,12 +117,9 @@ main: kit: entity: job: {
           }
           m: "GET"
           o: "/job-board-api"
-          q: {
-            exist: [
-              "location"
-              "page"
-              "search"
-            ]
+          rs: {
+            kind: "json"
+            media: "application/json"
           }
           s: [
             {

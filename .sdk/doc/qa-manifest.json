@@ -3,5 +3,17 @@
     "SUMMARY.md"
   ],
   "config": ".sdk/doc/qa/vale.ini",
-  "routes": {}
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Arbeitnow helps companies hire candidates with visa sponsorship / four day work week / remote opportunities.",
+      "Detailed job description",
+      "Job location",
+      "Name of the hiring company",
+      "Production server",
+      "Successful response with job listings",
+      "Timestamp when the job was created",
+      "Type of employment (for example, full-time, part-time, contract)"
+    ]
+  }
 }
